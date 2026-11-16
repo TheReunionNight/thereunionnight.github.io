@@ -3590,11 +3590,14 @@
           badgePngBase64: base64Png
         };
         const correoIngresado = inputEmail.value.trim().toLowerCase();
-          if (!correoIngresado.endsWith('@esan.edu.pe')) {
-            alert('Solo se permite el registro con tu correo institucional @esan.edu.pe.');
-            inputEmail.focus();
-            return;
-          }
+        if (!correoIngresado.endsWith('@esan.edu.pe')) {
+          mostrarAvisoESAN(
+                  'Correo institucional requerido',
+                  'Solo se permite el registro con tu correo institucional @esan.edu.pe.',
+            () => inputEmail.focus()
+          );
+          return;
+        }
 
         const response = await fetch(GOOGLE_SCRIPT_URL, {
           method: 'POST',
@@ -3606,8 +3609,11 @@
 
         const result = await response.json();
           if (result.status === 'duplicate' || result.status === 'invalid_domain') {
-            alert(result.message);
-          return;
+          mostrarAvisoESAN(
+            result.status === 'duplicate' ? 'Ya estás registrado' : 'Correo no permitido',
+            result.message
+          );
+            return;
           }
 
         if (result && result.status === 'success') {
@@ -3683,5 +3689,33 @@
     // Inicializar vista previa y QR desde API
     updatePreview();
   </script>
+  <!-- AVISO INSTITUCIONAL ESAN -->
+<div id="esanAvisoBackdrop" style="display:none; position:fixed; inset:0; background:rgba(8,10,16,0.75); backdrop-filter:blur(5px); z-index:9999; align-items:center; justify-content:center; padding:20px;">
+  <div style="background:#FFFFFF; border-top:5px solid #E30613; border-radius:18px; max-width:420px; width:100%; padding:30px 26px; text-align:center; box-shadow:0 24px 60px rgba(0,0,0,0.35); font-family:'Plus Jakarta Sans',sans-serif;">
+    <div style="width:54px; height:54px; border-radius:50%; background:rgba(227,6,19,0.1); color:#E30613; display:flex; align-items:center; justify-content:center; margin:0 auto 16px; font-family:'Montserrat',sans-serif; font-weight:900; font-size:24px;">!</div>
+    <h3 id="esanAvisoTitulo" style="font-family:'Montserrat',sans-serif; font-size:19px; font-weight:800; color:#2B2B2B; margin:0 0 10px;">Registro ya existente</h3>
+    <p id="esanAvisoTexto" style="font-size:14.5px; color:#5F6368; line-height:1.55; margin:0 0 22px;">Ya registraste tu asistencia anteriormente. No es necesario volver a registrarte.</p>
+    <button type="button" onclick="cerrarAvisoESAN()" style="background:#E30613; color:#FFFFFF; border:none; border-radius:999px; padding:12px 32px; font-family:'Montserrat',sans-serif; font-size:12.5px; font-weight:800; letter-spacing:0.08em; cursor:pointer; text-transform:uppercase;">Entendido</button>
+  </div>
+</div>
+
+<script>
+  let esanAvisoCallback = null;
+  function mostrarAvisoESAN(titulo, mensaje, alCerrar) {
+    const cm = document.getElementById('confirmModal');
+    if (cm) cm.classList.remove('open');
+    document.getElementById('esanAvisoTitulo').textContent = titulo;
+    document.getElementById('esanAvisoTexto').textContent = mensaje;
+    esanAvisoCallback = alCerrar || null;
+    document.getElementById('esanAvisoBackdrop').style.display = 'flex';
+  }
+  function cerrarAvisoESAN() {
+    document.getElementById('esanAvisoBackdrop').style.display = 'none';
+    if (typeof esanAvisoCallback === 'function') {
+      esanAvisoCallback();
+      esanAvisoCallback = null;
+    }
+  }
+</script>
 </body>
 </html>
