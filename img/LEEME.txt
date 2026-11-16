@@ -1,0 +1,19 @@
+THE REUNION NIGHT: MASTERS — Paquete Web Editable
+====================================================
+
+Estructura de archivos:
+1. index.html -> Código completo de la invitación, programa, integración con Google Calendar y generador de Ficha QR en tiempo real.
+2. img/       -> Carpeta lista para tus imágenes del Auditorio y la Terraza.
+
+¿Cómo agregar las fotos del Auditorio y la Terraza?
+1. Guarda la foto del auditorio dentro de la carpeta "img/" con el nombre exacto:
+   auditorio.jpg
+
+2. Guarda la foto de la terraza dentro de la carpeta "img/" con el nombre exacto:
+   terraza.jpg
+
+3. ¡Listo! Al abrir "index.html" en tu navegador, ambas fotografías aparecerán automáticamente dentro de la sección "Formato del Encuentro" (Momento 01 Auditorio y Momento 02 Terraza).
+   Si prefieres usar otros nombres de archivo (por ejemplo .png), solo busca en index.html:
+   - src="img/auditorio.jpg"
+   - src="img/terraza.jpg"
+   y reemplázalos por el nombre de tus imágenes.

@@ -1,0 +1,3677 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THE REUNION NIGHT: MASTERS | ESAN Graduate School of Business</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-black: #000000;
+      --bg-charcoal: #2B2F3C;
+      --bg-charcoal-deep: #181B24;
+      --bg-white: #FFFFFF;
+      --bg-soft: #F5F6F8;
+      --bg-card: #FFFFFF;
+      --bg-card-tint: #F9FAFB;
+      --esan-red: #E30613;
+      --esan-red-dark: #C20510;
+      --esan-red-soft: rgba(227, 6, 19, 0.08);
+      --gold-accent: #D4AF37;
+      --text-dark: #3D3D3D;
+      --text-heading: #2B2B2B;
+      --text-muted: #5F6368;
+      --border-light: #E2E5E9;
+      --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.06);
+      --shadow-card-hover: 0 14px 32px rgba(0, 0, 0, 0.11);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      background-color: var(--bg-white);
+      color: var(--text-dark);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, .font-display {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* ================= NAVBAR RESPONSIVE ================= */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 5%;
+      background: rgba(8, 10, 16, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #FFFFFF;
+      flex-shrink: 0;
+    }
+
+    .nav-tree-badge {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--esan-red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .nav-brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: #FFFFFF;
+    }
+
+    .nav-brand-text span.highlight {
+      background: transparent;
+      border: 1.5px solid #FFFFFF;
+      border-radius: 5px;
+      color: #FFFFFF;
+      padding: 1px 6px;
+      margin-left: 3px;
+    }
+
+    .nav-brand-text small {
+      font-size: 9px;
+      color: #D4D4D4;
+      letter-spacing: 0.16em;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: #E5E5E5;
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #FFFFFF;
+    }
+
+    .nav-right-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-nav-cta {
+      background: var(--esan-red);
+      color: #FFFFFF;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 11.5px;
+      letter-spacing: 0.08em;
+      padding: 11px 20px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn-nav-cta:hover {
+      background: var(--esan-red-dark);
+      transform: translateY(-1px);
+    }
+
+    .nav-menu-toggle {
+      display: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.08);
+      color: #FFFFFF;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .mobile-drawer {
+      display: none;
+      position: fixed;
+      top: 67px;
+      left: 0;
+      right: 0;
+      background: rgba(11, 14, 23, 0.98);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 16px 6% 22px;
+      z-index: 99;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .mobile-drawer.open {
+      display: flex;
+    }
+
+    .mobile-drawer a {
+      color: #F3F4F6;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 10px 4px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .mobile-drawer a:last-child {
+      border-bottom: none;
+    }
+
+    /* ================= HERO SECTION ================= */
+    .hero {
+      position: relative;
+      min-height: 94vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 116px 20px 64px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 18% 22%, rgba(227, 6, 19, 0.34) 0%, transparent 46%),
+        radial-gradient(circle at 84% 25%, rgba(30, 64, 175, 0.28) 0%, transparent 48%),
+        radial-gradient(circle at 50% 82%, rgba(212, 175, 55, 0.14) 0%, transparent 50%),
+        linear-gradient(145deg, #0B0E17 0%, #161C2E 52%, #1D0F16 100%);
+      color: #FFFFFF;
+    }
+
+    .hero-grid-floor {
+      position: absolute;
+      bottom: -80px;
+      left: -10%;
+      right: -10%;
+      height: 300px;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.09) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.09) 1px, transparent 1px);
+      background-size: 64px 42px;
+      transform: perspective(480px) rotateX(66deg);
+      mask-image: linear-gradient(to top, rgba(0,0,0,0.8), transparent 85%);
+      pointer-events: none;
+    }
+
+    .network-float {
+      position: absolute;
+      pointer-events: none;
+      opacity: 0.94;
+      animation: floatNetwork 8s ease-in-out infinite;
+      filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.85)) drop-shadow(0 10px 24px rgba(0, 0, 0, 0.45));
+    }
+
+    .net-1 { top: 15%; left: 7.5%; width: 112px; animation-delay: 0s; }
+    .net-2 { top: 18%; right: 7.5%; width: 118px; animation-delay: 1.8s; }
+    .net-3 { bottom: 18%; left: 11%; width: 96px; animation-delay: 3.1s; }
+    .net-4 { bottom: 19%; right: 11%; width: 94px; animation-delay: 2.3s; }
+
+    @keyframes floatNetwork {
+      0%, 100% { transform: translateY(0px) scale(1); }
+      50% { transform: translateY(-13px) scale(1.03); }
+    }
+
+    .hero-pill-top {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 8px 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(8px);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: #FFFFFF;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 2;
+      max-width: 92vw;
+    }
+
+    .hero-pill-top .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--esan-red);
+      box-shadow: 0 0 10px var(--esan-red);
+      flex-shrink: 0;
+    }
+
+    .hero-lockup {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 26px;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .lockup-emblem {
+      width: 98px;
+      height: 98px;
+      border-radius: 50%;
+      background: var(--esan-red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 36px rgba(227, 6, 19, 0.45), 0 12px 32px rgba(0, 0, 0, 0.35);
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .lockup-words {
+      text-align: left;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .lockup-row-top {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .lockup-line {
+      height: 3px;
+      flex: 1;
+      background: var(--esan-red);
+      min-width: 80px;
+    }
+
+    .lockup-reunion {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.04);
+      border: 2.5px solid #FFFFFF;
+      border-radius: 12px;
+      color: #FFFFFF;
+      font-size: clamp(32px, 5vw, 54px);
+      font-weight: 900;
+      line-height: 1;
+      padding: 8px 20px;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+      box-shadow: 0 0 24px rgba(255, 255, 255, 0.12);
+    }
+
+    .lockup-night {
+      font-size: clamp(32px, 5vw, 54px);
+      font-weight: 900;
+      line-height: 1;
+      color: #FFFFFF;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+
+    .lockup-row-bottom {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      color: #F1F5F9;
+    }
+
+    .hero-red-divider {
+      width: 56px;
+      height: 3px;
+      background: var(--esan-red);
+      margin: 4px auto 22px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-tagline {
+      font-size: clamp(16px, 2vw, 20px);
+      font-weight: 600;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 2;
+      padding: 0 12px;
+    }
+
+    .hero-location {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px 22px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      font-size: 13.5px;
+      color: #F3F4F6;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 2;
+      max-width: 92vw;
+    }
+
+    .hero-location strong {
+      color: #FFFFFF;
+    }
+
+    .save-date-split {
+      display: inline-flex;
+      align-items: stretch;
+      border-radius: 999px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.36);
+      text-decoration: none;
+      position: relative;
+      z-index: 2;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+      cursor: pointer;
+      max-width: 92vw;
+    }
+
+    .save-date-split:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 40px rgba(227, 6, 19, 0.35);
+    }
+
+    .save-date-left {
+      background: #080A10;
+      color: #FFFFFF;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 12.5px;
+      letter-spacing: 0.16em;
+      padding: 16px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .save-date-right {
+      background: var(--esan-red);
+      color: #FFFFFF;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 12.5px;
+      letter-spacing: 0.12em;
+      padding: 16px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .scroll-cue {
+      margin-top: 40px;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: #FFFFFF;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      position: relative;
+      z-index: 2;
+    }
+
+    .scroll-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    /* ================= SHARED LIGHT SECTION STYLES ================= */
+    .section-band-white {
+      background-color: var(--bg-white);
+      width: 100%;
+    }
+
+    .section-band-soft {
+      background-color: var(--bg-soft);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+      width: 100%;
+    }
+
+    section.content-section {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 84px 5%;
+    }
+
+    .section-pill-eyebrow {
+      display: table;
+      margin: 0 auto 14px;
+      background: var(--esan-red);
+      color: #FFFFFF;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 999px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: clamp(24px, 3.5vw, 38px);
+      font-weight: 800;
+      line-height: 1.22;
+      color: var(--text-heading);
+      margin-bottom: 14px;
+    }
+
+    .section-title span.red {
+      color: var(--esan-red);
+    }
+
+    .section-red-bar {
+      width: 48px;
+      height: 3.5px;
+      background: var(--esan-red);
+      margin: 0 auto 22px;
+      border-radius: 2px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 740px;
+      margin: 0 auto 48px;
+      color: var(--text-muted);
+      font-size: 15.5px;
+      padding: 0 6px;
+    }
+
+    .slide-card {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .slide-card.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ================= ENTÉRATE: INSPIRE / CONNECT / CELEBRATE + 3 ÍCONOS ================= */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-bottom: 52px;
+    }
+
+    .pillar-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-top: 4px solid var(--esan-red);
+      border-radius: 16px;
+      padding: 32px 26px;
+      box-shadow: var(--shadow-card);
+      color: var(--text-dark);
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .pillar-card.pillar-connect {
+      background: #FFFDF7;
+      border-top-color: var(--gold-accent);
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--esan-red);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .pillar-badge-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .pillar-badge-icon.red-icon {
+      background: var(--esan-red-soft);
+      border: 1px solid rgba(227, 6, 19, 0.24);
+      color: var(--esan-red);
+    }
+
+    .pillar-badge-icon.gold-icon {
+      background: rgba(212, 175, 55, 0.14);
+      border: 1px solid rgba(212, 175, 55, 0.36);
+      color: #B48A1E;
+    }
+
+    .pillar-card h3 {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+      color: var(--text-heading);
+      text-transform: uppercase;
+    }
+
+    .pillar-card p {
+      color: var(--text-muted);
+      font-size: 14.5px;
+      line-height: 1.65;
+    }
+
+    .value-icons-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .value-icons-prompt {
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: var(--esan-red);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .value-icons-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      position: relative;
+    }
+
+    .value-icon-trigger {
+      position: relative;
+      background: var(--bg-card-tint);
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 26px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      color: var(--text-heading);
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+      box-shadow: var(--shadow-card);
+    }
+
+    .value-icon-trigger:hover,
+    .value-icon-trigger.active {
+      transform: translateY(-4px);
+      background: #FFFFFF;
+      border-color: var(--esan-red);
+      box-shadow: 0 14px 32px rgba(227, 6, 19, 0.12);
+    }
+
+    .value-icon-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--esan-red-soft);
+      border: 1.5px solid rgba(227, 6, 19, 0.28);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--esan-red);
+      margin-bottom: 14px;
+      transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+    }
+
+    .value-icon-trigger.active .value-icon-circle {
+      background: var(--esan-red);
+      border-color: var(--esan-red);
+      color: #FFFFFF;
+      transform: scale(1.06);
+    }
+
+    .value-icon-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15.5px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: var(--text-heading);
+    }
+
+    .value-icon-hint {
+      font-size: 12px;
+      color: var(--esan-red);
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* ================= PANEL BLANCO ESAN ================= */
+    .esan-detail-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.68);
+      backdrop-filter: blur(4px);
+      z-index: 220;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 36px 20px;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .esan-detail-backdrop.open {
+      display: flex;
+      opacity: 1;
+    }
+
+    .esan-detail-modal {
+      position: relative;
+      background: #FFFFFF;
+      border-radius: 16px;
+      max-width: 960px;
+      width: 100%;
+      max-height: 88vh;
+      overflow-y: auto;
+      padding: 44px 52px 46px;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.35);
+      color: #3D3D3D;
+      transform: translateY(14px) scale(0.98);
+      transition: transform 0.28s ease;
+    }
+
+    .esan-detail-backdrop.open .esan-detail-modal {
+      transform: translateY(0) scale(1);
+    }
+
+    .esan-modal-close-circle {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      border: 1px solid #E2E5E9;
+      color: #2B2B2B;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+      z-index: 5;
+    }
+
+    .esan-modal-close-circle:hover {
+      background: var(--esan-red);
+      border-color: var(--esan-red);
+      color: #FFFFFF;
+      transform: scale(1.06);
+    }
+
+    .esan-modal-content {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+    }
+
+    .esan-modal-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(19px, 2.5vw, 25px);
+      font-weight: 800;
+      color: #2B2B2B;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+
+    .esan-red-pill-bar {
+      width: 5px;
+      height: 22px;
+      border-radius: 99px;
+      background: var(--esan-red);
+      flex-shrink: 0;
+    }
+
+    .esan-modal-list {
+      list-style: none;
+      margin-bottom: 28px;
+      padding-left: 16px;
+    }
+
+    .esan-modal-list li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 14.5px;
+      color: #4A4A4A;
+      margin-bottom: 8px;
+      line-height: 1.55;
+    }
+
+    .esan-modal-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #4A4A4A;
+      font-weight: 700;
+    }
+
+    .esan-modal-body-text {
+      padding-left: 16px;
+      font-size: 14.5px;
+      color: #4A4A4A;
+      line-height: 1.65;
+      margin-bottom: 14px;
+    }
+
+    .esan-modal-notes {
+      padding-left: 16px;
+      font-size: 12px;
+      color: #5F6368;
+      line-height: 1.55;
+    }
+
+    .esan-modal-notes p {
+      margin-bottom: 3px;
+    }
+
+    .esan-modal-watermark {
+      position: absolute;
+      right: 52px;
+      bottom: 24px;
+      display: flex;
+      align-items: flex-end;
+      gap: 6px;
+      pointer-events: none;
+      opacity: 0.16;
+      z-index: 1;
+    }
+
+    /* ================= FORMATO: DOS MOMENTOS + FOTOS ================= */
+    .moments-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .moment-card {
+      background: #FFFFFF;
+      border-radius: 18px;
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-card);
+    }
+
+    .moment-card.red-theme {
+      border-top: 4px solid var(--esan-red);
+    }
+
+    .moment-card.charcoal-theme {
+      border-top: 4px solid var(--bg-charcoal);
+    }
+
+    .venue-media-slot {
+      width: 100%;
+      height: 245px;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 22px;
+      border: 1px solid var(--border-light);
+      background: #EAECEF;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .venue-media-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .moment-card:hover .venue-media-slot img {
+      transform: scale(1.04);
+    }
+
+    .venue-placeholder-graphic {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 16px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .moment-title {
+      font-size: clamp(18px, 2vw, 22px);
+      font-weight: 900;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      color: var(--text-heading);
+    }
+
+    .moment-title .num-red { color: var(--esan-red); }
+    .moment-title .num-charcoal { color: var(--bg-charcoal); }
+    .moment-title .accent-red { color: var(--esan-red); }
+    .moment-title .accent-charcoal { color: var(--bg-charcoal); }
+
+    .moment-desc {
+      color: var(--text-muted);
+      font-size: 14.5px;
+    }
+
+    /* ================= ITINERARIO DE LA NOCHE ================= */
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 36px auto 0;
+      padding-left: 44px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 11px;
+      top: 18px;
+      bottom: 18px;
+      width: 2px;
+      background: #D4D8DF;
+    }
+
+    .timeline-item {
+      position: relative;
+      background: var(--bg-card-tint);
+      border: 1px solid var(--border-light);
+      border-radius: 14px;
+      padding: 22px 26px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    }
+
+    .timeline-item.highlight-accent {
+      background: #FFFFFF;
+      border-color: rgba(227, 6, 19, 0.28);
+    }
+
+    .timeline-item:hover {
+      background: #FFFFFF;
+      border-color: var(--esan-red);
+      transform: translateX(4px);
+      box-shadow: var(--shadow-card);
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -39px;
+      top: 25px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+    }
+
+    .timeline-dot.dot-red {
+      background: var(--esan-red);
+      box-shadow: 0 0 0 4px rgba(227, 6, 19, 0.16);
+    }
+
+    .timeline-dot.dot-charcoal {
+      background: var(--bg-charcoal);
+      box-shadow: 0 0 0 4px rgba(43, 47, 60, 0.16);
+    }
+
+    .timeline-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .timeline-time {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      color: var(--esan-red);
+    }
+
+    .timeline-zone-badge {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 3px 12px;
+      border-radius: 999px;
+      line-height: 1.3;
+    }
+
+    .timeline-zone-badge.zone-charcoal {
+      background: var(--bg-charcoal);
+      color: #FFFFFF;
+    }
+
+    .timeline-zone-badge.zone-red {
+      background: var(--esan-red);
+      color: #FFFFFF;
+    }
+
+    .timeline-item h3 {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--text-heading);
+      margin-bottom: 6px;
+    }
+
+    .timeline-item p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+    }
+
+    /* ================= EXPERIENCIAS (CARRUSEL DE TARJETAS) ================= */
+    .carousel-controls {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .carousel-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      color: var(--text-heading);
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .carousel-btn:hover {
+      background: var(--esan-red);
+      border-color: var(--esan-red);
+      color: #FFFFFF;
+      transform: scale(1.06);
+    }
+
+    .experiences-track {
+      display: flex;
+      gap: 22px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 8px 4px 18px;
+      scrollbar-width: none;
+      cursor: grab;
+    }
+
+    .experiences-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .experiences-track:active {
+      cursor: grabbing;
+    }
+
+    .exp-card {
+      flex: 0 0 calc(33.333% - 15px);
+      min-width: 280px;
+      scroll-snap-align: start;
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 28px 24px;
+      box-shadow: var(--shadow-card);
+      user-select: none;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .exp-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--esan-red);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .exp-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: var(--esan-red-soft);
+      border: 1px solid rgba(227, 6, 19, 0.22);
+      color: var(--esan-red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .exp-card h3 {
+      font-size: 17.5px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: var(--text-heading);
+    }
+
+    .exp-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .carousel-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      border: none;
+      background: #CBD5E1;
+      cursor: pointer;
+      transition: width 0.25s ease, background 0.25s ease;
+    }
+
+    .carousel-dot.active {
+      width: 28px;
+      background: var(--esan-red);
+    }
+
+    /* ================= REGISTRO & MATCHING WALL QR ================= */
+    .registration-wrapper {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 28px;
+      align-items: start;
+      width: 100%;
+    }
+
+    .form-panel {
+      background: var(--bg-card-tint);
+      border: 1px solid var(--border-light);
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: var(--shadow-card);
+      min-width: 0;
+      width: 100%;
+    }
+
+    .form-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-bottom: 18px;
+      width: 100%;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 0;
+      width: 100%;
+    }
+
+    .form-group label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      color: var(--text-heading);
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .form-group label span.req {
+      color: var(--esan-red);
+    }
+
+    .char-counter {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--text-muted);
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .char-counter.limit-near {
+      color: var(--esan-red);
+    }
+
+    .form-control {
+      width: 100%;
+      min-width: 0;
+      background: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      border-radius: 10px;
+      padding: 13px 15px;
+      color: var(--text-heading);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14.5px;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .form-control:focus {
+      border-color: var(--esan-red);
+      box-shadow: 0 0 0 3px rgba(227, 6, 19, 0.12);
+    }
+
+    .form-control.is-invalid {
+      border-color: var(--esan-red);
+      background-color: #FFF8F8;
+    }
+
+    .form-control.is-valid {
+      border-color: #16A34A;
+    }
+
+    .field-hint {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      line-height: 1.35;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    .field-hint.esan-badge {
+      color: #1E3A8A;
+      font-weight: 600;
+    }
+
+    .field-hint.esan-verified {
+      color: #15803D;
+      font-weight: 700;
+    }
+
+    .field-error {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--esan-red);
+      display: none;
+      line-height: 1.35;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    .field-error.visible {
+      display: block;
+    }
+
+    .profile-toggle-box {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: 14px;
+      padding: 18px;
+      margin-bottom: 18px;
+      width: 100%;
+    }
+
+    .profile-toggle-buttons {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 10px 0 14px;
+    }
+
+    .toggle-btn {
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid #CBD5E1;
+      background: #F8FAFC;
+      color: var(--text-muted);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .toggle-btn.active-red {
+      background: var(--esan-red);
+      border-color: var(--esan-red);
+      color: #FFFFFF;
+    }
+
+    .toggle-btn.active-charcoal {
+      background: var(--bg-charcoal);
+      border-color: var(--bg-charcoal);
+      color: #FFFFFF;
+    }
+
+    .btn-submit-qr {
+      width: 100%;
+      margin-top: 8px;
+      padding: 16px 22px;
+      border-radius: 999px;
+      border: none;
+      background: var(--esan-red);
+      color: #FFFFFF;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.07em;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-align: center;
+      box-shadow: 0 8px 22px rgba(227, 6, 19, 0.28);
+      transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .btn-submit-qr:hover:not(:disabled) {
+      background: var(--esan-red-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-submit-qr:disabled {
+      opacity: 0.7;
+      cursor: wait;
+    }
+
+    /* ================= VISTA PREVIA MATCHING CARD ================= */
+    .preview-panel {
+      background: #161B28;
+      border-radius: 18px;
+      padding: 22px;
+      color: #FFFFFF;
+      box-shadow: 0 14px 34px rgba(11, 14, 23, 0.18);
+      min-width: 0;
+      width: 100%;
+    }
+
+    .preview-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 16px;
+      font-size: 12px;
+      flex-wrap: wrap;
+    }
+
+    .live-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: #FFFFFF;
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22C55E;
+      box-shadow: 0 0 8px #22C55E;
+      flex-shrink: 0;
+    }
+
+    .matching-card {
+      background: #FFFFFF;
+      color: #1F2937;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.24);
+      width: 100%;
+    }
+
+    .matching-card-top-bar {
+      height: 7px;
+      background: var(--esan-red);
+      transition: background 0.25s ease;
+    }
+
+    .matching-card-top-bar.corp {
+      background: var(--bg-charcoal);
+    }
+
+    .matching-card-body {
+      padding: 22px;
+    }
+
+    .mc-identity {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .mc-initials-box {
+      width: 68px;
+      height: 68px;
+      border-radius: 14px;
+      background: #0B0E17;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .mc-initials-letters {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 25px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: 0.04em;
+    }
+
+    .mc-identity-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .mc-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(16px, 1.4vw, 19px);
+      font-weight: 900;
+      color: #1F2937;
+      line-height: 1.2;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    .mc-role {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      line-height: 1.35;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    .mc-badges {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 16px;
+    }
+
+    .mc-badge-program {
+      background: var(--bg-charcoal);
+      color: #FFFFFF;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9.5px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      padding: 6px 11px;
+      border-radius: 8px;
+      text-transform: uppercase;
+      line-height: 1.35;
+    }
+
+    .mc-badge-type {
+      background: var(--esan-red);
+      color: #FFFFFF;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9.5px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      padding: 6px 11px;
+      border-radius: 8px;
+      text-transform: uppercase;
+      line-height: 1.35;
+    }
+
+    .mc-badge-type.corp {
+      background: #0B0E17;
+    }
+
+    .mc-pitch-box {
+      background: #F5F6F8;
+      border: 1px solid #E2E5E9;
+      border-radius: 12px;
+      padding: 13px 15px;
+      margin-bottom: 16px;
+    }
+
+    .mc-pitch-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--esan-red);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .mc-pitch-label.corp {
+      color: var(--bg-charcoal);
+    }
+
+    .mc-pitch-text {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #374151;
+      line-height: 1.45;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    .mc-bottom-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 92px;
+      gap: 14px;
+      align-items: center;
+      padding-top: 14px;
+      border-top: 1px solid #E2E5E9;
+    }
+
+    .mc-match-row {
+      margin-bottom: 10px;
+    }
+
+    .mc-match-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .mc-match-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      color: #1F2937;
+    }
+
+    .mc-match-val {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.35;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    .mc-qr-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .mc-qr-frame {
+      width: 84px;
+      height: 84px;
+      border: 1.5px solid #2B2B2B;
+      border-radius: 10px;
+      padding: 4px;
+      background: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .mc-qr-frame img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+    }
+
+    .mc-linkedin-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9.5px;
+      font-weight: 800;
+      color: #0A66C2;
+      white-space: nowrap;
+    }
+
+    .mc-linkedin-in {
+      background: #0A66C2;
+      color: #FFFFFF;
+      padding: 1px 4px;
+      border-radius: 3px;
+      font-size: 9px;
+    }
+
+    /* ================= MODAL DE CONFIRMACIÓN REGISTRO ================= */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(8, 10, 16, 0.78);
+      backdrop-filter: blur(6px);
+      z-index: 200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-box {
+      background: #FFFFFF;
+      border-top: 5px solid var(--esan-red);
+      border-radius: 18px;
+      max-width: 520px;
+      width: 100%;
+      max-height: 92vh;
+      overflow-y: auto;
+      padding: 28px 24px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+      color: var(--text-heading);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 26px;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .email-status-banner {
+      background: #F0FDF4;
+      border: 1px solid #BBF7D0;
+      color: #166534;
+      border-radius: 10px;
+      padding: 11px 14px;
+      font-size: 12.5px;
+      line-height: 1.45;
+      margin-bottom: 16px;
+      text-align: left;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    .email-status-banner.warning {
+      background: #FFFBEB;
+      border-color: #FDE68A;
+      color: #92400E;
+    }
+
+    .modal-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .btn-download-png {
+      background: var(--esan-red);
+      color: #FFFFFF;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: 0.07em;
+      padding: 14px 18px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-gcal-modal {
+      background: var(--bg-charcoal);
+      color: #FFFFFF;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 11.5px;
+      letter-spacing: 0.05em;
+      padding: 13px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      background: #080A10;
+      padding: 40px 6%;
+      text-align: center;
+      color: #BDBDBD;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: #FFFFFF;
+    }
+
+    /* ================= RESPONSIVE: LAPTOPS, TABLETS Y CELULARES ================= */
+    @media (max-width: 1180px) {
+      .registration-wrapper {
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+        gap: 22px;
+      }
+      .form-panel {
+        padding: 24px;
+      }
+      .preview-panel {
+        padding: 20px;
+      }
+      .net-1, .net-2 { width: 92px; }
+      .net-3, .net-4 { width: 80px; }
+    }
+
+    @media (max-width: 1040px) {
+      .registration-wrapper {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .preview-panel {
+        max-width: 580px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 960px) {
+      .nav-links {
+        display: none;
+      }
+      .nav-menu-toggle {
+        display: inline-flex;
+      }
+      .pillars-grid,
+      .value-icons-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .pillars-grid > :last-child,
+      .value-icons-row > :last-child {
+        grid-column: 1 / -1;
+        max-width: 480px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      .moments-grid {
+        grid-template-columns: 1fr;
+      }
+      .exp-card {
+        flex: 0 0 calc(50% - 11px);
+      }
+      .net-1, .net-2, .net-3, .net-4 {
+        width: 72px;
+        opacity: 0.65;
+      }
+      .esan-detail-modal {
+        padding: 36px 28px 38px;
+      }
+      .esan-modal-watermark {
+        right: 20px;
+        bottom: 16px;
+        opacity: 0.1;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .navbar {
+        padding: 12px 4%;
+      }
+      .btn-nav-cta {
+        padding: 9px 14px;
+        font-size: 10.5px;
+      }
+      .hero {
+        min-height: auto;
+        padding: 98px 16px 52px;
+      }
+      .net-1 { top: 11%; left: 3%; width: 54px; opacity: 0.45; }
+      .net-2 { top: 12%; right: 3%; width: 56px; opacity: 0.45; }
+      .net-3, .net-4 { display: none; }
+      .hero-pill-top {
+        font-size: 9.5px;
+        letter-spacing: 0.1em;
+        padding: 7px 14px;
+        margin-bottom: 24px;
+      }
+      .hero-lockup {
+        flex-direction: column;
+        gap: 14px;
+      }
+      .lockup-emblem {
+        width: 80px;
+        height: 80px;
+      }
+      .lockup-emblem svg {
+        width: 80px;
+        height: 80px;
+      }
+      .lockup-words {
+        text-align: center;
+      }
+      .lockup-row-top,
+      .lockup-row-bottom {
+        justify-content: center;
+        font-size: 18px;
+      }
+      .lockup-line {
+        min-width: 42px;
+        flex: 0 1 56px;
+      }
+      .hero-location {
+        flex-direction: column;
+        border-radius: 16px;
+        padding: 12px 16px;
+        font-size: 12.5px;
+        text-align: center;
+      }
+      .save-date-split {
+        flex-direction: column;
+        border-radius: 16px;
+        width: 100%;
+      }
+      .save-date-left,
+      .save-date-right {
+        padding: 14px 18px;
+        font-size: 11.5px;
+      }
+      section.content-section {
+        padding: 64px 4.5%;
+      }
+      .pillars-grid,
+      .value-icons-row {
+        grid-template-columns: 1fr;
+      }
+      .pillars-grid > :last-child,
+      .value-icons-row > :last-child {
+        max-width: none;
+      }
+      .venue-media-slot {
+        height: 195px;
+      }
+      .timeline {
+        padding-left: 28px;
+      }
+      .timeline::before {
+        left: 6px;
+      }
+      .timeline-dot {
+        left: -28px;
+        width: 11px;
+        height: 11px;
+      }
+      .timeline-item {
+        padding: 18px 18px;
+      }
+      .exp-card {
+        flex: 0 0 88%;
+        min-width: 250px;
+      }
+      .form-panel {
+        padding: 22px 18px;
+      }
+      .form-grid-2,
+      .profile-toggle-buttons {
+        grid-template-columns: 1fr;
+      }
+      .preview-panel {
+        padding: 18px 14px;
+      }
+      .matching-card-body {
+        padding: 18px 16px;
+      }
+      .mc-initials-box {
+        width: 58px;
+        height: 58px;
+      }
+      .mc-initials-letters {
+        font-size: 22px;
+      }
+      .mc-bottom-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .mc-qr-wrapper {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 12px;
+        padding-top: 8px;
+        border-top: 1px dashed #E2E5E9;
+      }
+      .btn-submit-qr {
+        font-size: 11.5px;
+        padding: 15px 16px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .nav-brand-text {
+        font-size: 9.5px;
+      }
+      .btn-nav-cta span {
+        display: none;
+      }
+      .lockup-reunion,
+      .lockup-night {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= DEFINICIONES SVG REUTILIZABLES (PINO ORGÁNICO ESAN/STANFORD) ================= -->
+  <svg width="0" height="0" style="position:absolute; visibility:hidden;" aria-hidden="true">
+    <defs>
+      <symbol id="esan-pine-silhouette" viewBox="0 0 100 100">
+        <path fill="currentColor" fill-rule="evenodd" d="
+          M50 7
+          L51.6 11.2 L54.4 11.8 L51.6 13.4 L52.3 15.8 L56.5 17 L52.6 18.6 L58.2 21.4 L53.2 23 L60 26.2 L54.2 27.8
+          L62.5 31.6 L56.2 33.2 L64.8 37.5 L57.5 39 L67.2 44 L59 45.6 L69.8 51 L60.5 52.6
+          L72.8 58 L62 59.6 L74.8 65.2 L63 67 L76.8 72.8 L64.2 74.8
+          L78.5 80.5 L64.8 82.4 L75.2 87.8 L60.8 88.6 L66.5 91.5 L52.6 90.8
+          L52.6 98.5 L47.4 98.5 L47.4 90.8
+          L33.5 91.6 L39.4 88.6 L24.8 87.6 L35.8 82.2 L21.8 80.2 L36 74.5 L23.5 72.5 L37.2 66.8 L25.5 65 L38.2 59.4 L27.5 57.8 L39.8 52.4 L30.2 50.8 L41.2 45.4 L33 43.8 L42.8 38.8 L35.5 37.2 L44 33 L37.8 31.4 L45.8 27.6 L40.2 26 L46.8 22.8 L42 21.2 L47.6 18.4 L43.8 16.8 L48.2 15.2 L46 13.2 L48.6 11.6 Z
+          M51.2 29.5 L55.6 30.2 L51.8 31.8 Z
+          M41.5 47.5 L47.2 48.2 L42.5 49.8 Z
+          M52.2 55 L58.8 55.6 L53 57.5 Z
+          M38.8 69.2 L46.2 69.8 L40.2 71.8 Z
+          M51.8 76.2 L59.6 76.8 L52.8 78.8 Z
+        "/>
+      </symbol>
+
+      <symbol id="esan-pine-emblem" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="49" fill="#E30613"/>
+        <use href="#esan-pine-silhouette" style="color:#FFFFFF;"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar">
+    <a href="#" class="nav-brand">
+      <div class="nav-tree-badge" aria-hidden="true">
+        <svg width="36" height="36" viewBox="0 0 100 100">
+          <use href="#esan-pine-emblem"/>
+        </svg>
+      </div>
+      <div class="nav-brand-text">
+        <span>THE <span class="highlight">REUNION</span></span>
+        <span>NIGHT <small>MASTERS</small></span>
+      </div>
+    </a>
+
+    <div class="nav-links">
+      <a href="#enterate">Entérate</a>
+      <a href="#formato">Formato</a>
+      <a href="#programa">Programa</a>
+      <a href="#experiencias">Experiencias</a>
+    </div>
+
+    <div class="nav-right-actions">
+      <a href="#registro" class="btn-nav-cta">
+        REGISTRARME <span>&rarr;</span>
+      </a>
+      <button type="button" class="nav-menu-toggle" id="navMenuToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Menú desplegable para Tablets y Celulares -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="#enterate">Entérate</a>
+    <a href="#formato">Formato</a>
+    <a href="#programa">Programa</a>
+    <a href="#experiencias">Experiencias</a>
+    <a href="#registro" style="color:#E30613;">Registrarme y Generar QR &rarr;</a>
+  </div>
+
+  <!-- ================= HERO COVER ================= -->
+  <header class="hero">
+    <div class="hero-grid-floor"></div>
+
+    <!-- Ícono B&N 1 (Superior Izquierda) -->
+    <svg class="network-float net-1" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+      <path d="M22 10 L23.8 14.5 L28.5 16.2 L23.8 18 L22 22.5 L20.2 18 L15.5 16.2 L20.2 14.5 Z" fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+      <circle cx="38" cy="7" r="2.2" fill="#000000" stroke="#FFFFFF" stroke-width="0.8"/>
+      <path d="M104 60 L105.5 63.5 L109 65 L105.5 66.5 L104 70 L102.5 66.5 L99 65 L102.5 63.5 Z" fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+      <path d="M95 102 H103 M99 98 V106" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
+
+      <polygon points="60,17 97,38.5 97,81.5 60,103 23,81.5 23,38.5" stroke="#000000" stroke-width="3.2" fill="none"/>
+      <line x1="60" y1="17" x2="60" y2="103" stroke="#000000" stroke-width="3.2"/>
+      <line x1="23" y1="38.5" x2="97" y2="81.5" stroke="#000000" stroke-width="3.2"/>
+      <line x1="97" y1="38.5" x2="23" y2="81.5" stroke="#000000" stroke-width="3.2"/>
+
+      <circle cx="60" cy="60" r="21" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+      <ellipse cx="60" cy="60" rx="10.5" ry="21" stroke="#000000" stroke-width="2.6" fill="none"/>
+      <line x1="60" y1="39" x2="60" y2="81" stroke="#000000" stroke-width="2.6"/>
+      <line x1="39" y1="60" x2="81" y2="60" stroke="#000000" stroke-width="2.6"/>
+      <path d="M43 49 Q60 53 77 49" stroke="#000000" stroke-width="2.2" fill="none"/>
+      <path d="M43 71 Q60 67 77 71" stroke="#000000" stroke-width="2.2" fill="none"/>
+
+      <g transform="translate(60,17)">
+        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+        <circle cy="-3" r="3.8" fill="#000000"/>
+        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+      </g>
+      <g transform="translate(97,38.5)">
+        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+        <circle cy="-3" r="3.8" fill="#000000"/>
+        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+      </g>
+      <g transform="translate(97,81.5)">
+        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+        <circle cy="-3" r="3.8" fill="#000000"/>
+        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+      </g>
+      <g transform="translate(60,103)">
+        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+        <circle cy="-3" r="3.8" fill="#000000"/>
+        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+      </g>
+      <g transform="translate(23,81.5)">
+        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+        <circle cy="-3" r="3.8" fill="#000000"/>
+        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+      </g>
+      <g transform="translate(23,38.5)">
+        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+        <circle cy="-3" r="3.8" fill="#000000"/>
+        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+      </g>
+    </svg>
+
+    <!-- Ícono B&N 2 (Superior Derecha) -->
+    <svg class="network-float net-2" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+      <line x1="58" y1="58" x2="26" y2="26" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
+      <line x1="58" y1="58" x2="90" y2="90" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
+      <line x1="58" y1="58" x2="75" y2="28" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
+      <line x1="58" y1="58" x2="98" y2="57" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
+      <line x1="58" y1="58" x2="19" y2="68" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
+      <line x1="58" y1="58" x2="40" y2="88" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
+
+      <circle cx="75" cy="28" r="8" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+      <circle cx="98" cy="57" r="6" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+      <circle cx="19" cy="68" r="7" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+      <circle cx="40" cy="88" r="7.5" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+
+      <g transform="translate(26,26)">
+        <circle r="14" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+        <circle cy="-3" r="4" stroke="#000000" stroke-width="2.8" fill="none"/>
+        <path d="M-8 8 C-4 3.5, 4 3.5, 8 8" stroke="#000000" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+      </g>
+
+      <g transform="translate(90,90)">
+        <circle r="14" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+        <circle cy="-3" r="4" stroke="#000000" stroke-width="2.8" fill="none"/>
+        <path d="M-8 8 C-4 3.5, 4 3.5, 8 8" stroke="#000000" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+      </g>
+
+      <g transform="translate(58,58)">
+        <circle r="19" fill="#FFFFFF" stroke="#000000" stroke-width="3.4"/>
+        <circle cy="-4.5" r="5.2" stroke="#000000" stroke-width="3" fill="none"/>
+        <path d="M-11 10.5 C-5.5 4.5, 5.5 4.5, 11 10.5" stroke="#000000" stroke-width="3" stroke-linecap="round" fill="none"/>
+      </g>
+    </svg>
+
+    <!-- Ícono B&N 3 (Inferior Izquierda) -->
+    <svg class="network-float net-3" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+      <line x1="62" y1="62" x2="94" y2="30" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
+      <line x1="62" y1="62" x2="30" y2="94" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
+      <line x1="62" y1="62" x2="45" y2="32" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
+      <line x1="62" y1="62" x2="22" y2="61" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
+      <line x1="62" y1="62" x2="101" y2="72" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
+      <line x1="62" y1="62" x2="80" y2="92" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
+
+      <circle cx="45" cy="32" r="8" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+      <circle cx="22" cy="61" r="6" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+      <circle cx="101" cy="72" r="7" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+      <circle cx="80" cy="92" r="7.5" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+
+      <g transform="translate(94,30)">
+        <circle r="14" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+        <circle cy="-3" r="4" stroke="#000000" stroke-width="2.8" fill="none"/>
+        <path d="M-8 8 C-4 3.5, 4 3.5, 8 8" stroke="#000000" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+      </g>
+
+      <g transform="translate(30,94)">
+        <circle r="14" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+        <circle cy="-3" r="4" stroke="#000000" stroke-width="2.8" fill="none"/>
+        <path d="M-8 8 C-4 3.5, 4 3.5, 8 8" stroke="#000000" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+      </g>
+
+      <g transform="translate(62,62)">
+        <circle r="19" fill="#FFFFFF" stroke="#000000" stroke-width="3.4"/>
+        <circle cy="-4.5" r="5.2" stroke="#000000" stroke-width="3" fill="none"/>
+        <path d="M-11 10.5 C-5.5 4.5, 5.5 4.5, 11 10.5" stroke="#000000" stroke-width="3" stroke-linecap="round" fill="none"/>
+      </g>
+    </svg>
+
+    <!-- Ícono B&N 4 (Inferior Derecha) -->
+    <svg class="network-float net-4" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+      <polygon points="60,17 97,38.5 97,81.5 60,103 23,81.5 23,38.5" stroke="#000000" stroke-width="3.2" fill="none"/>
+      <line x1="60" y1="17" x2="60" y2="103" stroke="#000000" stroke-width="3.2"/>
+      <line x1="23" y1="38.5" x2="97" y2="81.5" stroke="#000000" stroke-width="3.2"/>
+      <line x1="97" y1="38.5" x2="23" y2="81.5" stroke="#000000" stroke-width="3.2"/>
+
+      <circle cx="60" cy="60" r="21" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+      <ellipse cx="60" cy="60" rx="10.5" ry="21" stroke="#000000" stroke-width="2.6" fill="none"/>
+      <line x1="60" y1="39" x2="60" y2="81" stroke="#000000" stroke-width="2.6"/>
+      <line x1="39" y1="60" x2="81" y2="60" stroke="#000000" stroke-width="2.6"/>
+      <path d="M43 49 Q60 53 77 49" stroke="#000000" stroke-width="2.2" fill="none"/>
+      <path d="M43 71 Q60 67 77 71" stroke="#000000" stroke-width="2.2" fill="none"/>
+
+      <g transform="translate(60,17)">
+        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+        <circle cy="-3" r="3.8" fill="#000000"/>
+        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+      </g>
+      <g transform="translate(97,38.5)">
+        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+        <circle cy="-3" r="3.8" fill="#000000"/>
+        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+      </g>
+      <g transform="translate(97,81.5)">
+        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+        <circle cy="-3" r="3.8" fill="#000000"/>
+        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+      </g>
+      <g transform="translate(60,103)">
+        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+        <circle cy="-3" r="3.8" fill="#000000"/>
+        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+      </g>
+      <g transform="translate(23,81.5)">
+        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+        <circle cy="-3" r="3.8" fill="#000000"/>
+        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+      </g>
+      <g transform="translate(23,38.5)">
+        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+        <circle cy="-3" r="3.8" fill="#000000"/>
+        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+      </g>
+    </svg>
+
+    <div class="hero-pill-top">
+      <span class="dot"></span>
+      MAESTRÍAS ESPECIALIZADAS Y MBA ESAN &bull; EL LEGADO DE STANFORD
+    </div>
+
+    <div class="hero-lockup">
+      <div class="lockup-emblem" aria-hidden="true">
+        <svg width="98" height="98" viewBox="0 0 100 100">
+          <use href="#esan-pine-emblem"/>
+        </svg>
+      </div>
+      <div class="lockup-words">
+        <div class="lockup-row-top">
+          <span>THE</span>
+          <span class="lockup-line"></span>
+        </div>
+        <div class="lockup-reunion">REUNION</div>
+        <div class="lockup-night">NIGHT</div>
+        <div class="lockup-row-bottom">
+          <span>MASTERS</span>
+          <span class="lockup-line"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-red-divider"></div>
+
+    <p class="hero-tagline">“Una noche para inspirar, reconectar y celebrar.”</p>
+
+    <div class="hero-location">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E30613" stroke-width="2.4" style="flex-shrink:0;">
+        <path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"/>
+        <circle cx="12" cy="11" r="2.2"/>
+      </svg>
+      <span><strong>Campus ESAN — Auditorio &amp; Terraza</strong> | Jirón Alonso de Molina 1652, Santiago de Surco</span>
+    </div>
+
+    <a id="btnGoogleCalendarHero"
+       href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=THE+REUNION+NIGHT%3A+MASTERS+-+ESAN&dates=20261204T233000Z/20261205T033000Z&details=Encuentro+exclusivo+de+networking+para+graduados+de+Maestr%C3%ADas+Especializadas+y+MBA+ESAN.+Auditorio+2+%26+Terraza.&location=Campus+ESAN%2C+Jir%C3%B3n+Alonso+de+Molina+1652%2C+Santiago+de+Surco%2C+Lima&ctz=America%2FLima"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="save-date-split"
+       title="Guardar evento en Google Calendar">
+      <span class="save-date-left">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2">
+          <rect x="3" y="4" width="18" height="18" rx="3"/>
+          <line x1="16" y1="2" x2="16" y2="6"/>
+          <line x1="8" y1="2" x2="8" y2="6"/>
+          <line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+        SAVE THE DATE
+      </span>
+      <span class="save-date-right">VIERNES 4 DE DICIEMBRE &bull; 18:30 HRS</span>
+    </a>
+
+    <a href="#enterate" class="scroll-cue">
+      <div class="scroll-circle">&darr;</div>
+      <span>ENTÉRATE</span>
+    </a>
+  </header>
+
+  <!-- ================= SECCIÓN 1: ENTÉRATE ================= -->
+  <div class="section-band-white">
+    <section id="enterate" class="content-section">
+      <div class="section-pill-eyebrow">ENTÉRATE</div>
+      <h2 class="section-title">Sobre THE REUNION NIGHT: <span class="red">MASTERS</span></h2>
+      <div class="section-red-bar"></div>
+      <p class="section-subtitle">
+        Un encuentro exclusivo de networking que reúne a la comunidad de Maestrías Especializadas y MBA de ESAN en una experiencia que integra conocimiento de alto impacto, conexiones estratégicas y entretenimiento.
+      </p>
+
+      <div class="pillars-grid">
+        <div class="pillar-card slide-card">
+          <div class="pillar-badge-icon red-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <h3>INSPIRE</h3>
+          <p>Charla magistral con un referente destacado sobre visión estratégica, liderazgo ejecutivo y los desafíos que marcan la agenda empresarial.</p>
+        </div>
+
+        <div class="pillar-card pillar-connect slide-card">
+          <div class="pillar-badge-icon gold-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <line x1="19" y1="8" x2="19" y2="14"/>
+              <line x1="22" y1="11" x2="16" y2="11"/>
+            </svg>
+          </div>
+          <h3>CONNECT</h3>
+          <p>Conversaciones estratégicas entre participantes de diferentes programas, potenciadas por fichas digitales con código QR para conectar al instante.</p>
+        </div>
+
+        <div class="pillar-card slide-card">
+          <div class="pillar-badge-icon red-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l1.9 5.8L20 10.7l-6.1 1.9L12 18.5l-1.9-5.9L4 10.7l6.1-1.9L12 3z"/>
+              <path d="M5 3v4M3 5h4M19 17v4M17 19h4"/>
+            </svg>
+          </div>
+          <h3>CELEBRATE</h3>
+          <p>Música, gastronomía y experiencias de marca en una terraza nocturna diseñada para celebrar el reencuentro de toda la comunidad ESAN.</p>
+        </div>
+      </div>
+
+      <div class="value-icons-wrapper">
+        <p class="value-icons-prompt">Haz clic en cada ícono para descubrir su valor profesional</p>
+
+        <div class="value-icons-row">
+          <div class="value-icon-trigger slide-card" data-pillar="comunidad-networking" role="button" tabindex="0" aria-haspopup="dialog">
+            <div class="value-icon-circle">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div class="value-icon-title">Comunidad &amp; Networking</div>
+            <span class="value-icon-hint">Ver valor profesional &uarr;</span>
+          </div>
+
+          <div class="value-icon-trigger slide-card" data-pillar="valor-academico" role="button" tabindex="0" aria-haspopup="dialog">
+            <div class="value-icon-circle">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+              </svg>
+            </div>
+            <div class="value-icon-title">Valor Académico</div>
+            <span class="value-icon-hint">Ver valor profesional &uarr;</span>
+          </div>
+
+          <div class="value-icon-trigger slide-card" data-pillar="marca-esan" role="button" tabindex="0" aria-haspopup="dialog">
+            <div class="value-icon-circle">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <div class="value-icon-title">Marca ESAN</div>
+            <span class="value-icon-hint">Ver valor profesional &uarr;</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================= PANEL BLANCO DESPLEGABLE (ESTILO FICHA ESAN) ================= -->
+  <div class="esan-detail-backdrop" id="esanDetailBackdrop" role="dialog" aria-modal="true" aria-labelledby="esanModalHeading1">
+    <div class="esan-detail-modal">
+      <button type="button" class="esan-modal-close-circle" id="esanModalCloseBtn" aria-label="Cerrar detalle">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </button>
+
+      <div class="esan-modal-content">
+        <h3 class="esan-modal-heading" id="esanModalHeading1">
+          <span class="esan-red-pill-bar"></span>
+          <span id="esanModalTitle1Text">Comunidad &amp; Networking</span>
+        </h3>
+
+        <ul class="esan-modal-list" id="esanModalBullets"></ul>
+
+        <h3 class="esan-modal-heading" id="esanModalHeading2">
+          <span class="esan-red-pill-bar"></span>
+          <span id="esanModalTitle2Text">Dinámica en la Terraza ESAN:</span>
+        </h3>
+
+        <p class="esan-modal-body-text" id="esanModalDescription"></p>
+
+        <div class="esan-modal-notes" id="esanModalNotes"></div>
+      </div>
+
+      <div class="esan-modal-watermark" aria-hidden="true">
+        <svg width="78" height="122" viewBox="0 0 100 100" preserveAspectRatio="none" style="color:#4A4A4A;">
+          <use href="#esan-pine-silhouette"/>
+        </svg>
+        <svg width="128" height="205" viewBox="0 0 100 100" preserveAspectRatio="none" style="color:#4A4A4A;">
+          <use href="#esan-pine-silhouette"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SECCIÓN 2: FORMATO ================= -->
+  <div class="section-band-soft">
+    <section id="formato" class="content-section">
+      <div class="section-pill-eyebrow">FORMATO DEL ENCUENTRO</div>
+      <h2 class="section-title">Una experiencia en dos momentos</h2>
+      <div class="section-red-bar"></div>
+      <p class="section-subtitle">
+        Diseñada para combinar inspiración ejecutiva en auditorio con networking activo al aire libre.
+      </p>
+
+      <div class="moments-grid">
+        <div class="moment-card red-theme slide-card">
+          <div>
+            <div class="venue-media-slot">
+              <img src="img/auditorio.jpg"
+                   alt="Auditorio 2 Campus ESAN"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="venue-placeholder-graphic" style="display:none;">
+                <svg width="160" height="84" viewBox="0 0 220 110" fill="none">
+                  <rect x="40" y="10" width="140" height="62" rx="8" stroke="#E30613" stroke-width="2"/>
+                  <svg x="92" y="23" width="36" height="36" viewBox="0 0 100 100">
+                    <use href="#esan-pine-emblem"/>
+                  </svg>
+                  <ellipse cx="110" cy="88" rx="95" ry="12" stroke="#4A4A4A" stroke-width="1.5"/>
+                </svg>
+              </div>
+            </div>
+
+            <h3 class="moment-title">
+              <span class="num-red">01</span> AUDITORIO <span style="color:#CBD5E1;">|</span> <span class="accent-charcoal">INSPIRE</span>
+            </h3>
+            <p class="moment-desc">
+              Bienvenida institucional y charla magistral de alto nivel. Un espacio diseñado para recibir inspiración ejecutiva, visión estratégica y tendencias clave del entorno empresarial.
+            </p>
+          </div>
+        </div>
+
+        <div class="moment-card charcoal-theme slide-card">
+          <div>
+            <div class="venue-media-slot">
+              <img src="img/terraza.jpg"
+                   alt="Terraza Campus ESAN"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="venue-placeholder-graphic" style="display:none;">
+                <svg width="160" height="84" viewBox="0 0 220 110" fill="none">
+                  <rect x="25" y="22" width="170" height="64" rx="10" stroke="#4A4A4A" stroke-width="1.8"/>
+                  <rect x="38" y="34" width="38" height="36" rx="5" stroke="#E30613" stroke-width="1.5"/>
+                  <rect x="86" y="32" width="48" height="40" rx="5" stroke="#4A4A4A" stroke-width="1.5"/>
+                  <rect x="144" y="34" width="38" height="36" rx="5" stroke="#E30613" stroke-width="1.5"/>
+                  <circle cx="65" cy="96" r="6" fill="#E30613"/>
+                  <circle cx="110" cy="96" r="7" fill="#4A4A4A"/>
+                  <circle cx="155" cy="96" r="6" fill="#E30613"/>
+                </svg>
+              </div>
+            </div>
+
+            <h3 class="moment-title">
+              <span class="num-charcoal">02</span> TERRAZA <span style="color:#CBD5E1;">|</span> <span class="accent-red">CONNECT &amp; CELEBRATE</span>
+            </h3>
+            <p class="moment-desc">
+              Masters Social Experience con networking activo, gastronomía, activaciones de marca y DJ en vivo. El escenario ideal para generar alianzas B2B y reconectar con tu promoción.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================= SECCIÓN 3: ITINERARIO DE LA NOCHE ================= -->
+  <div class="section-band-white">
+    <section id="programa" class="content-section">
+      <h2 class="section-title">Itinerario de la Noche</h2>
+      <div class="section-red-bar"></div>
+
+      <div class="timeline">
+        <div class="timeline-item slide-card">
+          <span class="timeline-dot dot-red" aria-hidden="true"></span>
+          <div class="timeline-meta">
+            <span class="timeline-time">18:30 HRS</span>
+            <span class="timeline-zone-badge zone-charcoal">Ingreso Campus ESAN</span>
+          </div>
+          <h3>Alfombra Roja, Retrato Ejecutivo &amp; Activación QR</h3>
+          <p>Registro ágil de asistencia, captura de tu retrato corporativo y activación inmediata de tu ficha en el Muro de Contactos.</p>
+        </div>
+
+        <div class="timeline-item highlight-accent slide-card">
+          <span class="timeline-dot dot-charcoal" aria-hidden="true"></span>
+          <div class="timeline-meta">
+            <span class="timeline-time">19:00 HRS</span>
+            <span class="timeline-zone-badge zone-red">Auditorio 2 ESAN</span>
+          </div>
+          <h3>¡Arranca la Noche! Bienvenida al Legado ESAN</h3>
+          <p>Apertura oficial del encuentro por parte de las autoridades de ESAN Graduate School of Business para celebrar el reencuentro de promociones.</p>
+        </div>
+
+        <div class="timeline-item slide-card">
+          <span class="timeline-dot dot-red" aria-hidden="true"></span>
+          <div class="timeline-meta">
+            <span class="timeline-time">19:15 HRS</span>
+            <span class="timeline-zone-badge zone-red">Bloque Inspire</span>
+          </div>
+          <h3>Charla Estelar: Ideas que Transforman el Futuro</h3>
+          <p>Conferencia magistral interactiva con un referente destacado sobre liderazgo ejecutivo, estrategia e innovación empresarial.</p>
+        </div>
+
+        <div class="timeline-item highlight-accent slide-card">
+          <span class="timeline-dot dot-charcoal" aria-hidden="true"></span>
+          <div class="timeline-meta">
+            <span class="timeline-time">20:10 HRS</span>
+            <span class="timeline-zone-badge zone-charcoal">Terraza ESAN</span>
+          </div>
+          <h3>Brindis Bajo las Estrellas &amp; Apertura del Muro de Contactos</h3>
+          <p>Desplazamiento hacia la terraza iluminada, copa de bienvenida y encendido oficial del tablero interactivo para descubrir sinergias.</p>
+        </div>
+
+        <div class="timeline-item slide-card">
+          <span class="timeline-dot dot-red" aria-hidden="true"></span>
+          <div class="timeline-meta">
+            <span class="timeline-time">20:20 HRS</span>
+            <span class="timeline-zone-badge zone-charcoal">Experiencia Social</span>
+          </div>
+          <h3>Conexiones Express, Sabores &amp; Música en Vivo</h3>
+          <p>Dinámicas de conexión rápida entre promociones de MBA y maestrías, estaciones gastronómicas, barras, módulos interactivos y DJ en vivo.</p>
+        </div>
+
+        <div class="timeline-item slide-card">
+          <span class="timeline-dot dot-charcoal" aria-hidden="true"></span>
+          <div class="timeline-meta">
+            <span class="timeline-time">22:30 HRS</span>
+            <span class="timeline-zone-badge zone-charcoal">Campus ESAN</span>
+          </div>
+          <h3>Broche de Oro &amp; Despedida de Edición</h3>
+          <p>Cierre festivo de la noche con nuevas alianzas creadas y acceso al directorio digital de contactos.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================= SECCIÓN 4: EXPERIENCIAS ================= -->
+  <div class="section-band-soft">
+    <section id="experiencias" class="content-section">
+      <div class="section-pill-eyebrow">MASTERS SOCIAL EXPERIENCE</div>
+      <h2 class="section-title">Experiencias &amp; Activaciones</h2>
+      <div class="section-red-bar"></div>
+      <p class="section-subtitle">
+        Todo lo que vivirás en la Terraza ESAN para potenciar tu red profesional en un ambiente distendido.
+      </p>
+
+      <div class="carousel-controls">
+        <button type="button" class="carousel-btn" id="btnPrevCards" aria-label="Tarjetas anteriores">&lsaquo;</button>
+        <button type="button" class="carousel-btn" id="btnNextCards" aria-label="Siguientes tarjetas">&rsaquo;</button>
+      </div>
+
+      <div class="experiences-track" id="experiencesTrack">
+        <div class="exp-card">
+          <div class="exp-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+              <rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zm4 4h3v3h-3zm-4 3h3"/>
+            </svg>
+          </div>
+          <h3>Matching Wall QR</h3>
+          <p>Muro físico y digital donde cada participante exhibe qué ofrece y qué busca, con acceso directo a su LinkedIn mediante código QR.</p>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="13" r="4"/>
+            </svg>
+          </div>
+          <h3>LinkedIn Photo Booth</h3>
+          <p>Estación fotográfica profesional al ingreso para renovar tu retrato ejecutivo y completar tu ficha oficial del evento.</p>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>Zonas Lounge &amp; Mesas Altas</h3>
+          <p>Espacios diseñados estratégicamente para facilitar conversaciones fluidas entre ejecutivos corporativos y fundadores.</p>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+              <line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/>
+            </svg>
+          </div>
+          <h3>Gastronomía &amp; Barras</h3>
+          <p>Estaciones gastronómicas variadas, coctelería y bebidas seleccionadas para acompañar toda la jornada.</p>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <h3>Experiencia Marca ESAN</h3>
+          <p>Backing oficial iluminado, espejo interactivo y puntos fotográficos diseñados para celebrar junto a tu promoción.</p>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+            </svg>
+          </div>
+          <h3>DJ &amp; Ambientación</h3>
+          <p>Musicalización curada en vivo e iluminación arquitectónica que transforman la terraza en el punto de encuentro ideal.</p>
+        </div>
+      </div>
+
+      <div class="carousel-dots" id="carouselDots"></div>
+    </section>
+  </div>
+
+  <!-- ================= SECCIÓN 5: REGISTRO & FICHA MATCHING WALL QR ================= -->
+  <div class="section-band-white">
+    <section id="registro" class="content-section">
+      <div class="section-pill-eyebrow">CONFIRMA TU ASISTENCIA</div>
+      <h2 class="section-title">Registro &amp; Ficha <span class="red">Matching Wall QR</span></h2>
+      <div class="section-red-bar"></div>
+      <p class="section-subtitle">
+        Completa tus datos profesionales para registrar tu asistencia en nuestra base de datos y recibir por correo tu ficha personalizada con código QR para el Muro de Contactos.
+      </p>
+
+      <div class="registration-wrapper">
+        <!-- FORMULARIO -->
+        <form id="networkingForm" class="form-panel" novalidate>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="inputName"><span>NOMBRES Y APELLIDOS <span class="req">*</span></span></label>
+              <input type="text" id="inputName" class="form-control" placeholder="Ej. Carlos Mendoza" required maxlength="45" autocomplete="name">
+              <span class="field-hint">Solo se permiten letras y espacios.</span>
+              <span class="field-error" id="errName">Ingresa un nombre válido (solo letras y espacios).</span>
+            </div>
+
+            <div class="form-group">
+              <label for="inputProgram"><span>ELEGIR MAESTRÍA ESAN <span class="req">*</span></span></label>
+              <select id="inputProgram" class="form-control" required>
+                <option value="MBA - Maestría en Administración de Empresas">MBA - Maestría en Administración de Empresas</option>
+                <option value="Maestría en Administración de Agronegocios">Maestría en Administración de Agronegocios</option>
+                <option value="Maestría en Data Analytics & Artificial Intelligence">Maestría en Data Analytics &amp; Artificial Intelligence</option>
+                <option value="Maestría en Dirección de Marketing e Innovación Digital">Maestría en Dirección de Marketing e Innovación Digital</option>
+                <option value="Maestría en Dirección de Marketing y Ventas">Maestría en Dirección de Marketing y Ventas</option>
+                <option value="Maestría en Dirección de Tecnologías y Transformación Empresarial">Maestría en Dirección de Tecnologías y Transformación Empresarial</option>
+                <option value="Maestría en Finanzas">Maestría en Finanzas</option>
+                <option value="Maestría en Finanzas y Derecho Corporativo">Maestría en Finanzas y Derecho Corporativo</option>
+                <option value="Maestría en Gerencia de la Construcción">Maestría en Gerencia de la Construcción</option>
+                <option value="Maestría en Gerencia de Servicios de Salud">Maestría en Gerencia de Servicios de Salud</option>
+                <option value="Maestría en Gestión de la Energía">Maestría en Gestión de la Energía</option>
+                <option value="Maestría en Gestión Deportiva">Maestría en Gestión Deportiva</option>
+                <option value="Maestría en Gestión Empresarial">Maestría en Gestión Empresarial</option>
+                <option value="Maestría en Gestión Minera">Maestría en Gestión Minera</option>
+                <option value="Maestría en Gestión Pública">Maestría en Gestión Pública</option>
+                <option value="Maestría en Gestión y Desarrollo Inmobiliario">Maestría en Gestión y Desarrollo Inmobiliario</option>
+                <option value="Maestría en Investigación en Ciencias de la Administración">Maestría en Investigación en Ciencias de la Administración</option>
+                <option value="Maestría en Organización y Dirección de Personas">Maestría en Organización y Dirección de Personas</option>
+                <option value="Maestría en Project Management">Maestría en Project Management</option>
+                <option value="Maestría en Quality & Process Management">Maestría en Quality &amp; Process Management</option>
+                <option value="Maestría en Supply Chain Management">Maestría en Supply Chain Management</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="inputEmail"><span>CORREO ELECTRÓNICO <span class="req">*</span></span></label>
+              <input type="email" id="inputEmail" class="form-control" placeholder="usuario@esan.edu.pe" required autocomplete="email">
+              <span class="field-hint esan-badge" id="hintEmail">De preferencia usa tu correo institucional @esan.edu.pe</span>
+              <span class="field-error" id="errEmail">Ingresa un correo electrónico válido y existente.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="inputLinkedin"><span>ENLACE DE LINKEDIN (PARA QR) <span class="req">*</span></span></label>
+              <input type="url" id="inputLinkedin" class="form-control" placeholder="www.linkedin.com/in/carlos-mendoza" required>
+              <span class="field-hint">Ej: www.linkedin.com/in/carlos-mendoza</span>
+              <span class="field-error" id="errLinkedin">Ingresa un enlace válido de LinkedIn (ej. linkedin.com/in/tu-perfil).</span>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="inputRole"><span>CARGO ACTUAL <span class="req">*</span></span></label>
+              <input type="text" id="inputRole" class="form-control" placeholder="Ej. Director General" required maxlength="45">
+              <span class="field-hint">Solo texto (no se permiten números).</span>
+              <span class="field-error" id="errRole">Ingresa tu cargo actual usando solo texto sin números.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="inputCompany"><span>EMPRESA O MARCA <span class="req">*</span></span></label>
+              <input type="text" id="inputCompany" class="form-control" placeholder="Ej. TechSol Perú" required maxlength="40">
+              <span class="field-hint">Solo texto (no se permiten números).</span>
+              <span class="field-error" id="errCompany">Ingresa el nombre de tu empresa usando solo texto sin números.</span>
+            </div>
+          </div>
+
+          <div class="profile-toggle-box">
+            <div class="form-group">
+              <label><span>¿TIENES UN EMPRENDIMIENTO O EMPRESA PROPIA? <span class="req">*</span></span></label>
+              <div class="profile-toggle-buttons">
+                <button type="button" id="btnTypeEntrepreneur" class="toggle-btn active-red">SÍ, TENGO NEGOCIO</button>
+                <button type="button" id="btnTypeCorporate" class="toggle-btn">NO, PERFIL CORPORATIVO</button>
+              </div>
+            </div>
+
+            <div class="form-group" id="groupPitch">
+              <label id="labelPitch" for="inputPitch">
+                <span>DESCRIBE TU EMPRENDIMIENTO / PITCH BREVE <span class="req">*</span></span>
+                <span class="char-counter" id="pitchCounter">0 / 60 caracteres</span>
+              </label>
+              <input type="text" id="inputPitch" class="form-control"
+                     placeholder="Ej. Desarrollamos software financiero para optimizar PYMES"
+                     maxlength="60" required>
+              <span class="field-hint">Máximo 60 caracteres contando espacios.</span>
+              <span class="field-error" id="errPitch">Escribe una descripción breve de máximo 60 caracteres.</span>
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="inputOffer"><span>¿QUÉ OFRECES A LA RED? <span class="req">*</span></span></label>
+              <input type="text" id="inputOffer" class="form-control" placeholder="Ej. Consultoría B2B y desarrollo web" required maxlength="75">
+              <span class="field-hint">Acepta letras y números.</span>
+              <span class="field-error" id="errOffer">Completa este campo usando letras y/o números.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="inputSeek"><span>¿QUÉ BUSCAS EN EL EVENTO? <span class="req">*</span></span></label>
+              <input type="text" id="inputSeek" class="form-control" placeholder="Ej. Socios comerciales e inversionistas" required maxlength="75">
+              <span class="field-hint">Acepta letras y números.</span>
+              <span class="field-error" id="errSeek">Completa este campo usando letras y/o números.</span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit-qr" id="btnSubmitForm">
+            CONFIRMAR ASISTENCIA Y GENERAR MI FICHA QR
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" style="flex-shrink:0;">
+              <circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/>
+            </svg>
+          </button>
+        </form>
+
+        <!-- VISTA PREVIA EN TIEMPO REAL -->
+        <div class="preview-panel">
+          <div class="preview-header">
+            <span class="live-indicator"><span class="live-dot"></span> VISTA PREVIA EN TIEMPO REAL</span>
+            <span style="color:#E5E7EB; font-weight:600; white-space:nowrap;">Muro de Contactos</span>
+          </div>
+
+          <div class="matching-card" id="matchingCardElement">
+            <div class="matching-card-top-bar" id="mcTopBar"></div>
+            <div class="matching-card-body">
+              <div class="mc-identity">
+                <div class="mc-initials-box">
+                  <span class="mc-initials-letters" id="mcInitials">CM</span>
+                </div>
+                <div class="mc-identity-info">
+                  <div class="mc-name" id="mcName">CARLOS MENDOZA</div>
+                  <div class="mc-role" id="mcRole">Director General &bull; TechSol Perú</div>
+                </div>
+              </div>
+
+              <div class="mc-badges">
+                <span class="mc-badge-program" id="mcProgram">MBA - MAESTRÍA EN ADMINISTRACIÓN DE EMPRESAS</span>
+                <span class="mc-badge-type" id="mcTypeBadge">EMPRENDIMIENTO</span>
+              </div>
+
+              <div class="mc-pitch-box">
+                <div class="mc-pitch-label" id="mcPitchLabel">SOBRE MI EMPRENDIMIENTO:</div>
+                <div class="mc-pitch-text" id="mcPitchText">
+                  Desarrollamos software financiero para optimizar PYMES
+                </div>
+              </div>
+
+              <div class="mc-bottom-grid">
+                <div>
+                  <div class="mc-match-row">
+                    <div class="mc-match-label">OFREZCO:</div>
+                    <div class="mc-match-val" id="mcOffer">Consultoría B2B y desarrollo web</div>
+                  </div>
+                  <div class="mc-match-row">
+                    <div class="mc-match-label">BUSCO:</div>
+                    <div class="mc-match-val" id="mcSeek">Socios comerciales e inversionistas</div>
+                  </div>
+                </div>
+
+                <div class="mc-qr-wrapper">
+                  <div class="mc-qr-frame">
+                    <img id="liveQrImg" alt="Código QR LinkedIn válido" crossorigin="anonymous">
+                  </div>
+                  <div class="mc-linkedin-tag">
+                    <span class="mc-linkedin-in">in</span> LinkedIn QR
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================= MODAL DE CONFIRMACIÓN, GUARDADO EN GOOGLE SHEETS & ENVÍO EMAIL ================= -->
+  <div class="modal-backdrop" id="confirmModal">
+    <div class="modal-box">
+      <button type="button" class="modal-close" id="closeModalBtn">&times;</button>
+      <div style="margin: 0 auto 12px; width: 52px; height: 52px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+        <svg width="52" height="52" viewBox="0 0 100 100">
+          <use href="#esan-pine-emblem"/>
+        </svg>
+      </div>
+      <h3 style="font-size: 21px; font-weight: 900; margin-bottom: 6px; color: #2B2B2B;">¡Asistencia Confirmada!</h3>
+      <p style="color: #5F6368; font-size: 13.5px; margin-bottom: 14px;">
+        Tu ficha oficial para el <strong style="color:#2B2B2B;">Matching Wall QR</strong> está lista.
+      </p>
+
+      <div class="email-status-banner" id="emailStatusBanner">
+        Registrando tu asistencia en Google Sheets y enviando tu tarjeta por correo...
+      </div>
+
+      <div style="background:#F5F6F8; border:1px solid #E2E5E9; border-radius:16px; padding:14px; display:inline-flex; flex-direction:column; align-items:center; gap:8px;">
+        <img id="modalQrImg" alt="Código QR válido LinkedIn" crossorigin="anonymous" style="width:150px; height:150px; background:#FFFFFF; padding:6px; border-radius:8px;">
+        <span style="color:#2B2B2B; font-family:'Montserrat',sans-serif; font-weight:800; font-size:11px;" id="modalBadgeName">CARLOS MENDOZA</span>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="btn-download-png" id="btnDownloadPng">
+          DESCARGAR MI FICHA OFICIAL EN PNG
+        </button>
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=THE+REUNION+NIGHT%3A+MASTERS+-+ESAN&dates=20261204T233000Z/20261205T033000Z&details=Encuentro+exclusivo+de+networking+para+graduados+de+Maestr%C3%ADas+Especializadas+y+MBA+ESAN.+Auditorio+2+%26+Terraza.&location=Campus+ESAN%2C+Jir%C3%B3n+Alonso+de+Molina+1652%2C+Santiago+de+Surco%2C+Lima&ctz=America%2FLima"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn-gcal-modal">
+          GUARDAR EN GOOGLE CALENDAR (4 DIC &bull; 18:30 HRS)
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p><strong>THE REUNION NIGHT: MASTERS</strong> &mdash; ESAN Graduate School of Business</p>
+    <p style="margin-top: 6px;">Campus ESAN &bull; Jirón Alonso de Molina 1652, Santiago de Surco, Lima</p>
+  </footer>
+
+  <script>
+    // ================= URL CONECTADA A GOOGLE SHEETS ("Networking") + ENVÍO DE TARJETA =================
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/a/macros/esan.edu.pe/s/AKfycbwYJKrDbAYXWeu0gJoC3DHaR0-f5JyKKMElwNdC_t1Z8YOlrt2adW9y8PEOkJOJzpoHgg/exec';
+
+    // ================= 0. MENÚ RESPONSIVE PARA TABLETS Y CELULARES =================
+    const navMenuToggle = document.getElementById('navMenuToggle');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+
+    navMenuToggle.addEventListener('click', () => {
+      const isOpen = mobileDrawer.classList.toggle('open');
+      navMenuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    mobileDrawer.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileDrawer.classList.remove('open');
+        navMenuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // ================= 1. MODAL BLANCO ESAN AL HACER CLIC EN LOS 3 ÍCONOS =================
+    const PILLAR_CONTENT = {
+      'comunidad-networking': {
+        title1: 'Comunidad & Networking',
+        bullets: [
+          'Integración transversal entre promociones de MBA y maestrías especializadas de ESAN.',
+          'Intercambio directo de oportunidades de negocio, alianzas B2B y sinergias directivas.'
+        ],
+        title2: 'Dinámica en la Terraza ESAN:',
+        description: 'Amplía tu círculo estratégico mediante el Matching Wall QR y rondas de conexión rápida, identificando al instante qué ofrece y qué busca cada egresado para conectar en LinkedIn y generar alianzas reales.',
+        notes: [
+          'Notas:',
+          '(1) Participación exclusiva para alumnos y graduados de programas de posgrado ESAN.',
+          '(2) Tu ficha QR y directorio digital de conexiones se activan automáticamente al registrarte.'
+        ]
+      },
+      'valor-academico': {
+        title1: 'Valor Académico',
+        bullets: [
+          'Contenido ejecutivo de vanguardia que proyecta la excelencia y rigor de posgrado.',
+          'Charla magistral con un referente destacado sobre estrategia, liderazgo e innovación empresarial.'
+        ],
+        title2: 'Bloque Inspire en Auditorio 2:',
+        description: 'Un espacio diseñado para la actualización directiva de alto impacto, fomentando la reflexión estratégica y el intercambio de ideas sobre los desafíos actuales de los negocios.',
+        notes: [
+          'Notas:',
+          '(1) Sesión presencial en el Auditorio 2 del Campus ESAN antes de pasar a la Terraza.',
+          '(2) Incluye espacio interactivo de conversación y preguntas con el expositor.'
+        ]
+      },
+      'marca-esan': {
+        title1: 'Marca ESAN',
+        bullets: [
+          'Orgullo institucional respaldado por nuestra historia como primera escuela de posgrado y el legado Stanford.',
+          'Posicionamiento profesional y sentido de pertenencia junto a una red líder de ejecutivos.'
+        ],
+        title2: 'Experiencia Institucional:',
+        description: 'Celebra el reencuentro de promociones con estaciones fotográficas profesionales (LinkedIn Photo Booth), activaciones de marca y una ambientación pensada para fortalecer los lazos de nuestra comunidad.',
+        notes: [
+          'Notas:',
+          '(1) Incluye toma de retrato ejecutivo profesional al ingreso para renovar tu perfil de LinkedIn.',
+          '(2) Cupos limitados según aforo del Auditorio 2 y Terraza del Campus ESAN.'
+        ]
+      }
+    };
+
+    const valueTriggers = document.querySelectorAll('.value-icon-trigger');
+    const esanDetailBackdrop = document.getElementById('esanDetailBackdrop');
+    const esanModalCloseBtn = document.getElementById('esanModalCloseBtn');
+    const esanModalTitle1Text = document.getElementById('esanModalTitle1Text');
+    const esanModalBullets = document.getElementById('esanModalBullets');
+    const esanModalTitle2Text = document.getElementById('esanModalTitle2Text');
+    const esanModalDescription = document.getElementById('esanModalDescription');
+    const esanModalNotes = document.getElementById('esanModalNotes');
+
+    function openEsanDetailModal(pillarKey, triggerEl) {
+      const data = PILLAR_CONTENT[pillarKey];
+      if (!data) return;
+
+      valueTriggers.forEach(item => item.classList.remove('active'));
+      if (triggerEl) triggerEl.classList.add('active');
+
+      esanModalTitle1Text.textContent = data.title1;
+      esanModalBullets.innerHTML = data.bullets
+        .map(item => `<li>${escapeHtml(item)}</li>`)
+        .join('');
+      esanModalTitle2Text.textContent = data.title2;
+      esanModalDescription.textContent = data.description;
+      esanModalNotes.innerHTML = data.notes
+        .map(line => `<p>${escapeHtml(line)}</p>`)
+        .join('');
+
+      esanDetailBackdrop.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeEsanDetailModal() {
+      esanDetailBackdrop.classList.remove('open');
+      valueTriggers.forEach(item => item.classList.remove('active'));
+      document.body.style.overflow = '';
+    }
+
+    valueTriggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const key = trigger.getAttribute('data-pillar');
+        openEsanDetailModal(key, trigger);
+      });
+
+      trigger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          trigger.click();
+        }
+      });
+    });
+
+    esanModalCloseBtn.addEventListener('click', closeEsanDetailModal);
+    esanDetailBackdrop.addEventListener('click', (e) => {
+      if (e.target === esanDetailBackdrop) closeEsanDetailModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && esanDetailBackdrop.classList.contains('open')) {
+        closeEsanDetailModal();
+      }
+    });
+
+    // ================= 2. CARRUSEL DE EXPERIENCIAS & ENTRADA SUAVE =================
+    const track = document.getElementById('experiencesTrack');
+    const btnPrevCards = document.getElementById('btnPrevCards');
+    const btnNextCards = document.getElementById('btnNextCards');
+    const dotsContainer = document.getElementById('carouselDots');
+    const expCards = Array.from(track.querySelectorAll('.exp-card'));
+
+    expCards.forEach((_, idx) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'carousel-dot' + (idx === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', `Ir a tarjeta ${idx + 1}`);
+      dot.addEventListener('click', () => {
+        const cardWidth = expCards[0].offsetWidth + 22;
+        track.scrollTo({ left: idx * cardWidth, behavior: 'smooth' });
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = Array.from(dotsContainer.querySelectorAll('.carousel-dot'));
+
+    function updateCarouselDots() {
+      const cardWidth = expCards[0].offsetWidth + 22;
+      const activeIndex = Math.min(
+        expCards.length - 1,
+        Math.max(0, Math.round(track.scrollLeft / cardWidth))
+      );
+      dots.forEach((d, i) => d.classList.toggle('active', i === activeIndex));
+    }
+
+    track.addEventListener('scroll', updateCarouselDots, { passive: true });
+
+    btnPrevCards.addEventListener('click', () => {
+      const step = expCards[0].offsetWidth + 22;
+      track.scrollBy({ left: -step, behavior: 'smooth' });
+    });
+
+    btnNextCards.addEventListener('click', () => {
+      const step = expCards[0].offsetWidth + 22;
+      if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 10) {
+        track.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        track.scrollBy({ left: step, behavior: 'smooth' });
+      }
+    });
+
+    let isDown = false;
+    let startX = 0;
+    let scrollStart = 0;
+    track.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.pageX - track.offsetLeft;
+      scrollStart = track.scrollLeft;
+    });
+    window.addEventListener('mouseup', () => { isDown = false; });
+    track.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - track.offsetLeft;
+      track.scrollLeft = scrollStart - (x - startX) * 1.3;
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('is-visible');
+          }, index * 65);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.slide-card').forEach(el => revealObserver.observe(el));
+
+    // ================= 3. GENERACIÓN DE QR VÁLIDO VÍA API =================
+    function normalizeLinkedinUrl(raw) {
+      let val = (raw || '').trim();
+      if (!val) return 'https://www.linkedin.com/in/carlos-mendoza';
+      if (!/^https?:\/\//i.test(val)) {
+        if (val.toLowerCase().includes('linkedin.com')) {
+          val = 'https://' + val.replace(/^\/+/, '');
+        } else {
+          val = 'https://www.linkedin.com/in/' + val.replace(/^@/, '');
+        }
+      }
+      return val;
+    }
+
+    function getValidQrApiUrl(targetUrl) {
+      const cleanUrl = normalizeLinkedinUrl(targetUrl);
+      return `https://api.qrserver.com/v1/create-qr-code/?size=320x320&margin=8&ecc=M&color=1F2937&bgcolor=FFFFFF&data=${encodeURIComponent(cleanUrl)}`;
+    }
+
+    const liveQrImg = document.getElementById('liveQrImg');
+    const modalQrImg = document.getElementById('modalQrImg');
+    let currentQrSrc = '';
+    let qrDebounceTimer = null;
+
+    function updateApiQrImage(rawLinkedin) {
+      const apiSrc = getValidQrApiUrl(rawLinkedin);
+      if (apiSrc === currentQrSrc) return;
+      currentQrSrc = apiSrc;
+
+      clearTimeout(qrDebounceTimer);
+      qrDebounceTimer = setTimeout(() => {
+        liveQrImg.src = apiSrc;
+        modalQrImg.src = apiSrc;
+      }, 220);
+    }
+
+    // ================= 4. VALIDACIONES ESTRICTAS DEL FORMULARIO =================
+    const state = {
+      isEntrepreneur: true
+    };
+
+    const inputName = document.getElementById('inputName');
+    const inputProgram = document.getElementById('inputProgram');
+    const inputEmail = document.getElementById('inputEmail');
+    const inputLinkedin = document.getElementById('inputLinkedin');
+    const inputRole = document.getElementById('inputRole');
+    const inputCompany = document.getElementById('inputCompany');
+    const inputPitch = document.getElementById('inputPitch');
+    const inputOffer = document.getElementById('inputOffer');
+    const inputSeek = document.getElementById('inputSeek');
+
+    const hintEmail = document.getElementById('hintEmail');
+    const pitchCounter = document.getElementById('pitchCounter');
+
+    const btnTypeEntrepreneur = document.getElementById('btnTypeEntrepreneur');
+    const btnTypeCorporate = document.getElementById('btnTypeCorporate');
+    const labelPitch = document.getElementById('labelPitch');
+
+    const mcTopBar = document.getElementById('mcTopBar');
+    const mcInitials = document.getElementById('mcInitials');
+    const mcName = document.getElementById('mcName');
+    const mcRole = document.getElementById('mcRole');
+    const mcProgram = document.getElementById('mcProgram');
+    const mcTypeBadge = document.getElementById('mcTypeBadge');
+    const mcPitchLabel = document.getElementById('mcPitchLabel');
+    const mcPitchText = document.getElementById('mcPitchText');
+    const mcOffer = document.getElementById('mcOffer');
+    const mcSeek = document.getElementById('mcSeek');
+
+    inputName.addEventListener('input', () => {
+      const cleaned = inputName.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]/g, '');
+      if (cleaned !== inputName.value) {
+        inputName.value = cleaned;
+        showFieldError(inputName, 'errName', true);
+      } else {
+        showFieldError(inputName, 'errName', false);
+      }
+      updatePreview();
+    });
+
+    inputRole.addEventListener('input', () => {
+      const cleaned = inputRole.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]/g, '');
+      if (cleaned !== inputRole.value) {
+        inputRole.value = cleaned;
+        showFieldError(inputRole, 'errRole', true);
+      } else {
+        showFieldError(inputRole, 'errRole', false);
+      }
+      updatePreview();
+    });
+
+    inputCompany.addEventListener('input', () => {
+      const cleaned = inputCompany.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]/g, '');
+      if (cleaned !== inputCompany.value) {
+        inputCompany.value = cleaned;
+        showFieldError(inputCompany, 'errCompany', true);
+      } else {
+        showFieldError(inputCompany, 'errCompany', false);
+      }
+      updatePreview();
+    });
+
+    inputPitch.addEventListener('input', () => {
+      if (inputPitch.value.length > 60) {
+        inputPitch.value = inputPitch.value.slice(0, 60);
+      }
+      const len = inputPitch.value.length;
+      pitchCounter.textContent = `${len} / 60 caracteres`;
+      pitchCounter.classList.toggle('limit-near', len >= 54);
+      showFieldError(inputPitch, 'errPitch', false);
+      updatePreview();
+    });
+
+    [
+      { el: inputOffer, errId: 'errOffer' },
+      { el: inputSeek, errId: 'errSeek' }
+    ].forEach(({ el, errId }) => {
+      el.addEventListener('input', () => {
+        const cleaned = el.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñÜü0-9\s.,-]/g, '');
+        if (cleaned !== el.value) {
+          el.value = cleaned;
+        }
+        showFieldError(el, errId, false);
+        updatePreview();
+      });
+    });
+
+    const domainCache = new Map();
+
+    async function checkEmailDomainExists(email) {
+      const parts = email.trim().toLowerCase().split('@');
+      if (parts.length !== 2 || !parts[1]) return false;
+      const domain = parts[1];
+      if (domain === 'esan.edu.pe') return true;
+      if (domainCache.has(domain)) return domainCache.get(domain);
+
+      try {
+        const resp = await fetch(`https://dns.google/resolve?name=${encodeURIComponent(domain)}&type=MX`);
+        const data = await resp.json();
+        const exists = data.Status === 0 && Array.isArray(data.Answer) && data.Answer.length > 0;
+        domainCache.set(domain, exists);
+        return exists;
+      } catch (_) {
+        return /^[a-z0-9.-]+\.[a-z]{2,}$/i.test(domain);
+      }
+    }
+
+    inputEmail.addEventListener('input', () => {
+      const val = inputEmail.value.trim().toLowerCase();
+      if (val.endsWith('@esan.edu.pe')) {
+        hintEmail.textContent = 'Correo institucional ESAN (@esan.edu.pe) verificado.';
+        hintEmail.className = 'field-hint esan-verified';
+      } else {
+        hintEmail.textContent = 'De preferencia usa tu correo institucional @esan.edu.pe';
+        hintEmail.className = 'field-hint esan-badge';
+      }
+      showFieldError(inputEmail, 'errEmail', false);
+    });
+
+    inputEmail.addEventListener('blur', async () => {
+      const val = inputEmail.value.trim();
+      if (!val) return;
+      const syntaxOk = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(val);
+      if (!syntaxOk) {
+        showFieldError(inputEmail, 'errEmail', true, 'Formato de correo inválido. Ej: usuario@esan.edu.pe');
+        return;
+      }
+      const domainOk = await checkEmailDomainExists(val);
+      if (!domainOk) {
+        showFieldError(inputEmail, 'errEmail', true, 'El dominio de este correo no existe. Verifica o usa tu @esan.edu.pe.');
+      } else {
+        showFieldError(inputEmail, 'errEmail', false);
+        inputEmail.classList.add('is-valid');
+      }
+    });
+
+    function isValidLinkedinProfile(raw) {
+      const val = (raw || '').trim();
+      if (!val) return false;
+      const normalized = /^https?:\/\//i.test(val) ? val : 'https://' + val.replace(/^\/+/, '');
+      return /^https?:\/\/([a-z]{2,3}\.)?linkedin\.com\/(in|pub)\/[\p{L}\p{N}\-._~%]{2,100}\/?(\?.*)?$/iu.test(normalized);
+    }
+
+    inputLinkedin.addEventListener('input', () => {
+      showFieldError(inputLinkedin, 'errLinkedin', false);
+      updatePreview();
+    });
+
+    inputLinkedin.addEventListener('blur', () => {
+      const val = inputLinkedin.value.trim();
+      if (val && !/^https?:\/\//i.test(val) && val.toLowerCase().includes('linkedin.com')) {
+        inputLinkedin.value = 'https://' + val.replace(/^\/+/, '');
+      }
+      if (inputLinkedin.value.trim() && !isValidLinkedinProfile(inputLinkedin.value)) {
+        showFieldError(inputLinkedin, 'errLinkedin', true);
+      } else if (inputLinkedin.value.trim()) {
+        showFieldError(inputLinkedin, 'errLinkedin', false);
+        inputLinkedin.classList.add('is-valid');
+      }
+      updatePreview();
+    });
+
+    inputProgram.addEventListener('change', updatePreview);
+
+    function showFieldError(inputEl, errId, isError, customMsg) {
+      const errEl = document.getElementById(errId);
+      if (!errEl) return;
+      if (customMsg) errEl.textContent = customMsg;
+      if (isError) {
+        inputEl.classList.add('is-invalid');
+        inputEl.classList.remove('is-valid');
+        errEl.classList.add('visible');
+      } else {
+        inputEl.classList.remove('is-invalid');
+        errEl.classList.remove('visible');
+      }
+    }
+
+    function getInitials(fullName) {
+      const clean = (fullName || 'Carlos Mendoza').trim().replace(/\s+/g, ' ');
+      if (!clean) return 'CM';
+      const parts = clean.split(' ');
+      if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+      return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+    }
+
+    function updatePreview() {
+      const nameVal = inputName.value.trim() || 'CARLOS MENDOZA';
+      const roleVal = inputRole.value.trim() || 'Director General';
+      const companyVal = inputCompany.value.trim() || 'TechSol Perú';
+      const programVal = inputProgram.value || 'MBA - Maestría en Administración de Empresas';
+      const offerVal = inputOffer.value.trim() || 'Consultoría B2B y desarrollo web';
+      const seekVal = inputSeek.value.trim() || 'Socios comerciales e inversionistas';
+
+      mcInitials.textContent = getInitials(nameVal);
+      mcName.textContent = nameVal.toUpperCase();
+      mcRole.innerHTML = `${escapeHtml(roleVal)} &bull; ${escapeHtml(companyVal)}`;
+      mcProgram.textContent = programVal.toUpperCase();
+      mcOffer.textContent = offerVal;
+      mcSeek.textContent = seekVal;
+
+      if (state.isEntrepreneur) {
+        mcTopBar.classList.remove('corp');
+        mcTypeBadge.classList.remove('corp');
+        mcTypeBadge.textContent = 'EMPRENDIMIENTO';
+        mcPitchLabel.classList.remove('corp');
+        mcPitchLabel.textContent = 'SOBRE MI EMPRENDIMIENTO:';
+        mcPitchText.textContent = inputPitch.value.trim() || 'Desarrollamos software financiero para optimizar PYMES';
+      } else {
+        mcTopBar.classList.add('corp');
+        mcTypeBadge.classList.add('corp');
+        mcTypeBadge.textContent = 'PERFIL CORPORATIVO';
+        mcPitchLabel.classList.add('corp');
+        mcPitchLabel.textContent = 'ESPECIALIDAD CORPORATIVA:';
+        mcPitchText.textContent = inputPitch.value.trim() || 'Dirección estratégica y transformación financiera';
+      }
+
+      updateApiQrImage(inputLinkedin.value);
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/[&<>"']/g, (m) => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      }[m]));
+    }
+
+    btnTypeEntrepreneur.addEventListener('click', () => {
+      state.isEntrepreneur = true;
+      btnTypeEntrepreneur.classList.add('active-red');
+      btnTypeCorporate.classList.remove('active-charcoal');
+      labelPitch.firstElementChild.innerHTML = 'DESCRIBE TU EMPRENDIMIENTO / PITCH BREVE <span class="req">*</span>';
+      inputPitch.placeholder = 'Ej. Desarrollamos software financiero para optimizar PYMES';
+      updatePreview();
+    });
+
+    btnTypeCorporate.addEventListener('click', () => {
+      state.isEntrepreneur = false;
+      btnTypeCorporate.classList.add('active-charcoal');
+      btnTypeEntrepreneur.classList.remove('active-red');
+      labelPitch.firstElementChild.innerHTML = 'ESPECIALIDAD / APORTE CORPORATIVO <span class="req">*</span>';
+      inputPitch.placeholder = 'Ej. Dirección estratégica y transformación financiera';
+      updatePreview();
+    });
+
+    // ================= 5. GENERADOR DE FICHA PNG OFICIAL =================
+    async function loadQrImageForCanvas(linkedinUrl) {
+      const qrApiUrl = getValidQrApiUrl(linkedinUrl);
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.crossOrigin = 'anonymous';
+        img.onload = () => resolve(img);
+        img.onerror = () => resolve(null);
+        img.src = qrApiUrl;
+      });
+    }
+
+    async function buildOfficialBadgeCanvas() {
+      const canvas = document.createElement('canvas');
+      canvas.width = 1080;
+      canvas.height = 1540;
+      const ctx = canvas.getContext('2d');
+
+      const bgGrad = ctx.createLinearGradient(0, 0, 1080, 1540);
+      bgGrad.addColorStop(0, '#0B0E17');
+      bgGrad.addColorStop(0.55, '#161C2E');
+      bgGrad.addColorStop(1, '#1D0F16');
+      ctx.fillStyle = bgGrad;
+      ctx.fillRect(0, 0, 1080, 1540);
+
+      ctx.fillStyle = '#080A10';
+      ctx.fillRect(0, 0, 1080, 195);
+
+      ctx.fillStyle = '#E30613';
+      ctx.beginPath();
+      ctx.arc(130, 98, 36, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.save();
+      ctx.translate(94, 62);
+      ctx.scale(0.72, 0.72);
+      const pinePath = new Path2D("M50 7 L51.6 11.2 L54.4 11.8 L51.6 13.4 L52.3 15.8 L56.5 17 L52.6 18.6 L58.2 21.4 L53.2 23 L60 26.2 L54.2 27.8 L62.5 31.6 L56.2 33.2 L64.8 37.5 L57.5 39 L67.2 44 L59 45.6 L69.8 51 L60.5 52.6 L72.8 58 L62 59.6 L74.8 65.2 L63 67 L76.8 72.8 L64.2 74.8 L78.5 80.5 L64.8 82.4 L75.2 87.8 L60.8 88.6 L66.5 91.5 L52.6 90.8 L52.6 98.5 L47.4 98.5 L47.4 90.8 L33.5 91.6 L39.4 88.6 L24.8 87.6 L35.8 82.2 L21.8 80.2 L36 74.5 L23.5 72.5 L37.2 66.8 L25.5 65 L38.2 59.4 L27.5 57.8 L39.8 52.4 L30.2 50.8 L41.2 45.4 L33 43.8 L42.8 38.8 L35.5 37.2 L44 33 L37.8 31.4 L45.8 27.6 L40.2 26 L46.8 22.8 L42 21.2 L47.6 18.4 L43.8 16.8 L48.2 15.2 L46 13.2 L48.6 11.6 Z");
+      ctx.fillStyle = '#FFFFFF';
+      ctx.fill(pinePath);
+      ctx.restore();
+
+      ctx.fillStyle = '#FFFFFF';
+      ctx.font = '800 28px Montserrat, sans-serif';
+      ctx.fillText('THE REUNION NIGHT: MASTERS', 188, 95);
+      ctx.fillStyle = '#D4D4D4';
+      ctx.font = '700 18px Montserrat, sans-serif';
+      ctx.fillText('ESAN GRADUATE SCHOOL OF BUSINESS  •  4 DE DICIEMBRE', 188, 125);
+
+      const cardX = 70, cardY = 235, cardW = 940, cardH = 1215, r = 32;
+      ctx.fillStyle = '#FFFFFF';
+      roundRect(ctx, cardX, cardY, cardW, cardH, r);
+      ctx.fill();
+
+      ctx.fillStyle = state.isEntrepreneur ? '#E30613' : '#2B2F3C';
+      ctx.fillRect(cardX + 40, cardY, cardW - 80, 14);
+
+      const boxX = 130, boxY = 295, boxS = 160;
+      ctx.fillStyle = '#0B0E17';
+      roundRect(ctx, boxX, boxY, boxS, boxS, 24);
+      ctx.fill();
+
+      const initials = getInitials(inputName.value);
+      ctx.fillStyle = '#FFFFFF';
+      ctx.font = '900 64px Montserrat, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(initials, boxX + boxS / 2, boxY + boxS / 2);
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'alphabetic';
+
+      const nameStr = (inputName.value.trim() || 'CARLOS MENDOZA').toUpperCase();
+      const roleStr = `${inputRole.value.trim() || 'Director General'} • ${inputCompany.value.trim() || 'TechSol Perú'}`;
+      ctx.fillStyle = '#1F2937';
+      ctx.font = '900 38px Montserrat, sans-serif';
+      wrapText(ctx, nameStr, 325, 348, 625, 44);
+
+      ctx.fillStyle = '#5F6368';
+      ctx.font = '600 24px Plus Jakarta Sans, sans-serif';
+      ctx.fillText(roleStr.slice(0, 48), 325, 434);
+
+      const progText = (inputProgram.value || 'MBA - MAESTRÍA EN ADMINISTRACIÓN DE EMPRESAS').toUpperCase();
+      ctx.fillStyle = '#2B2F3C';
+      roundRect(ctx, 130, 486, 820, 46, 12);
+      ctx.fill();
+      ctx.fillStyle = '#FFFFFF';
+      ctx.font = '800 17px Montserrat, sans-serif';
+      ctx.fillText(progText.slice(0, 62), 152, 515);
+
+      ctx.fillStyle = state.isEntrepreneur ? '#E30613' : '#0B0E17';
+      roundRect(ctx, 130, 544, 300, 42, 12);
+      ctx.fill();
+      ctx.fillStyle = '#FFFFFF';
+      ctx.font = '800 16px Montserrat, sans-serif';
+      ctx.fillText(state.isEntrepreneur ? 'EMPRENDIMIENTO' : 'PERFIL CORPORATIVO', 152, 571);
+
+      ctx.fillStyle = '#F5F6F8';
+      roundRect(ctx, 130, 616, 820, 185, 22);
+      ctx.fill();
+
+      ctx.fillStyle = state.isEntrepreneur ? '#E30613' : '#2B2F3C';
+      ctx.font = '800 20px Montserrat, sans-serif';
+      ctx.fillText(state.isEntrepreneur ? 'SOBRE MI EMPRENDIMIENTO:' : 'ESPECIALIDAD CORPORATIVA:', 165, 664);
+
+      ctx.fillStyle = '#1F2937';
+      ctx.font = '700 27px Plus Jakarta Sans, sans-serif';
+      const pitchStr = inputPitch.value.trim() || (state.isEntrepreneur
+        ? 'Desarrollamos software financiero para optimizar PYMES'
+        : 'Dirección estratégica y transformación financiera');
+      wrapText(ctx, pitchStr, 165, 714, 750, 38);
+
+      ctx.strokeStyle = '#E2E5E9';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(130, 845);
+      ctx.lineTo(950, 845);
+      ctx.stroke();
+
+      ctx.fillStyle = '#2B2B2B';
+      ctx.font = '800 22px Montserrat, sans-serif';
+      ctx.fillText('OFREZCO:', 130, 910);
+      ctx.fillStyle = '#5F6368';
+      ctx.font = '500 25px Plus Jakarta Sans, sans-serif';
+      wrapText(ctx, inputOffer.value.trim() || 'Consultoría B2B y desarrollo web', 130, 952, 470, 34);
+
+      ctx.fillStyle = '#2B2B2B';
+      ctx.font = '800 22px Montserrat, sans-serif';
+      ctx.fillText('BUSCO:', 130, 1090);
+      ctx.fillStyle = '#5F6368';
+      ctx.font = '500 25px Plus Jakarta Sans, sans-serif';
+      wrapText(ctx, inputSeek.value.trim() || 'Socios comerciales e inversionistas', 130, 1132, 470, 34);
+
+      const qrBoxX = 650, qrBoxY = 895, qrBoxS = 290;
+      ctx.strokeStyle = '#2B2B2B';
+      ctx.lineWidth = 4;
+      roundRect(ctx, qrBoxX, qrBoxY, qrBoxS, qrBoxS, 22);
+      ctx.stroke();
+
+      const qrImgObj = await loadQrImageForCanvas(inputLinkedin.value);
+      if (qrImgObj) {
+        ctx.drawImage(qrImgObj, qrBoxX + 14, qrBoxY + 14, 262, 262);
+      }
+
+      ctx.fillStyle = '#0A66C2';
+      ctx.font = '800 22px Montserrat, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('in  LinkedIn QR', qrBoxX + qrBoxS / 2, qrBoxY + qrBoxS + 42);
+
+      return canvas;
+    }
+
+    // ================= 6. ENVÍO A GOOGLE SHEETS ("Networking" / "Hoja 1") + CORREO CON TARJETA =================
+    const form = document.getElementById('networkingForm');
+    const btnSubmitForm = document.getElementById('btnSubmitForm');
+    const confirmModal = document.getElementById('confirmModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const modalBadgeName = document.getElementById('modalBadgeName');
+    const btnDownloadPng = document.getElementById('btnDownloadPng');
+    const emailStatusBanner = document.getElementById('emailStatusBanner');
+
+    let latestBadgeCanvas = null;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      let valid = true;
+
+      const nameVal = inputName.value.trim();
+      if (!nameVal || !/^[A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]+$/.test(nameVal)) {
+        showFieldError(inputName, 'errName', true);
+        valid = false;
+      }
+
+      const emailVal = inputEmail.value.trim();
+      const syntaxOk = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(emailVal);
+      if (!syntaxOk) {
+        showFieldError(inputEmail, 'errEmail', true, 'Ingresa un correo electrónico válido (de preferencia @esan.edu.pe).');
+        valid = false;
+      } else {
+        const domainExists = await checkEmailDomainExists(emailVal);
+        if (!domainExists) {
+          showFieldError(inputEmail, 'errEmail', true, 'El dominio de correo ingresado no existe. Verifica tu dirección.');
+          valid = false;
+        }
+      }
+
+      if (!isValidLinkedinProfile(inputLinkedin.value)) {
+        showFieldError(inputLinkedin, 'errLinkedin', true);
+        valid = false;
+      }
+
+      const roleVal = inputRole.value.trim();
+      if (!roleVal || !/^[A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]+$/.test(roleVal)) {
+        showFieldError(inputRole, 'errRole', true);
+        valid = false;
+      }
+
+      const companyVal = inputCompany.value.trim();
+      if (!companyVal || !/^[A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]+$/.test(companyVal)) {
+        showFieldError(inputCompany, 'errCompany', true);
+        valid = false;
+      }
+
+      const pitchVal = inputPitch.value.trim();
+      if (!pitchVal || pitchVal.length > 60) {
+        showFieldError(inputPitch, 'errPitch', true);
+        valid = false;
+      }
+
+      const offerVal = inputOffer.value.trim();
+      if (!offerVal || !/^[A-Za-zÁÉÍÓÚáéíóúÑñÜü0-9\s.,-]+$/.test(offerVal)) {
+        showFieldError(inputOffer, 'errOffer', true);
+        valid = false;
+      }
+
+      const seekVal = inputSeek.value.trim();
+      if (!seekVal || !/^[A-Za-zÁÉÍÓÚáéíóúÑñÜü0-9\s.,-]+$/.test(seekVal)) {
+        showFieldError(inputSeek, 'errSeek', true);
+        valid = false;
+      }
+
+      if (!valid) {
+        const firstInvalid = form.querySelector('.is-invalid');
+        if (firstInvalid) firstInvalid.focus();
+        return;
+      }
+
+      btnSubmitForm.disabled = true;
+      btnSubmitForm.textContent = 'GUARDANDO EN EXCEL Y ENVIANDO CORREO...';
+
+      updatePreview();
+      const linkedinFullUrl = normalizeLinkedinUrl(inputLinkedin.value);
+      const qrApiLink = getValidQrApiUrl(linkedinFullUrl);
+      modalQrImg.src = qrApiLink;
+      modalBadgeName.textContent = nameVal.toUpperCase();
+
+      latestBadgeCanvas = await buildOfficialBadgeCanvas();
+      const dataUrl = latestBadgeCanvas.toDataURL('image/png');
+      const base64Png = dataUrl.split(',')[1];
+      const safeFileName = `ficha-esan-${nameVal.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`;
+
+      emailStatusBanner.classList.remove('warning');
+      emailStatusBanner.innerHTML = `Guardando tu asistencia en Google Sheets y enviando tu tarjeta PNG a <strong>${escapeHtml(emailVal)}</strong>...`;
+      confirmModal.classList.add('open');
+
+      try {
+        const payload = {
+          name: nameVal,
+          program: inputProgram.value,
+          email: emailVal,
+          linkedin: linkedinFullUrl,
+          role: roleVal,
+          company: companyVal,
+          profileType: state.isEntrepreneur ? 'Emprendimiento / Negocio Propio' : 'Perfil Corporativo',
+          pitch: pitchVal,
+          offer: offerVal,
+          seek: seekVal,
+          qrApiUrl: qrApiLink,
+          fileName: safeFileName,
+          badgePngBase64: base64Png
+        };
+
+        const response = await fetch(GOOGLE_SCRIPT_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'text/plain;charset=utf-8'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+
+        if (result && result.status === 'success') {
+          emailStatusBanner.innerHTML = `
+            <strong>¡Listo! Asistencia registrada en Google Sheets.</strong><br>
+            Hemos guardado tus datos en el registro oficial y enviado un correo de confirmación con tu tarjeta PNG adjunta a <strong>${escapeHtml(emailVal)}</strong>.
+          `;
+        } else {
+          throw new Error((result && result.message) || 'Error en Google Apps Script');
+        }
+      } catch (err) {
+        emailStatusBanner.classList.add('warning');
+        emailStatusBanner.innerHTML = `
+          <strong>Registro procesado:</strong> Verifica tu bandeja de entrada en <strong>${escapeHtml(emailVal)}</strong> (y tu hoja de Google Sheets). También puedes descargar tu tarjeta PNG directamente aquí abajo.
+        `;
+      } finally {
+        btnSubmitForm.disabled = false;
+        btnSubmitForm.innerHTML = `
+          CONFIRMAR ASISTENCIA Y GENERAR MI FICHA QR
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" style="flex-shrink:0;">
+            <circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/>
+          </svg>
+        `;
+      }
+    });
+
+    closeModalBtn.addEventListener('click', () => confirmModal.classList.remove('open'));
+    confirmModal.addEventListener('click', (e) => {
+      if (e.target === confirmModal) confirmModal.classList.remove('open');
+    });
+
+    btnDownloadPng.addEventListener('click', async () => {
+      const canvas = latestBadgeCanvas || await buildOfficialBadgeCanvas();
+      const nameStr = (inputName.value.trim() || 'carlos-mendoza').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      const link = document.createElement('a');
+      link.download = `ficha-networking-${nameStr}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    });
+
+    function roundRect(ctx, x, y, w, h, radius) {
+      ctx.beginPath();
+      ctx.moveTo(x + radius, y);
+      ctx.lineTo(x + w - radius, y);
+      ctx.quadraticCurveTo(x + w, y, x + w, y + radius);
+      ctx.lineTo(x + w, y + h - radius);
+      ctx.quadraticCurveTo(x + w, y + h, x + w - radius, y + h);
+      ctx.lineTo(x + radius, y + h);
+      ctx.quadraticCurveTo(x, y + h, x, y + h - radius);
+      ctx.lineTo(x, y + radius);
+      ctx.quadraticCurveTo(x, y, x + radius, y);
+      ctx.closePath();
+    }
+
+    function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
+      const words = text.split(' ');
+      let line = '';
+      let currY = y;
+      for (let n = 0; n < words.length; n++) {
+        const testLine = line + words[n] + ' ';
+        const metrics = ctx.measureText(testLine);
+        if (metrics.width > maxWidth && n > 0) {
+          ctx.fillText(line.trim(), x, currY);
+          line = words[n] + ' ';
+          currY += lineHeight;
+        } else {
+          line = testLine;
+        }
+      }
+      ctx.fillText(line.trim(), x, currY);
+    }
+
+    // Inicializar vista previa y QR desde API
+    updatePreview();
+  </script>
+</body>
+</html>
