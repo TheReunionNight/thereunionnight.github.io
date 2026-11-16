@@ -3609,10 +3609,7 @@
 
         const result = await response.json();
           if (result.status === 'duplicate' || result.status === 'invalid_domain') {
-          mostrarAvisoESAN(
-            result.status === 'duplicate' ? 'Ya estás registrado' : 'Correo no permitido',
-            result.message
-          );
+            mostrarAvisoESAN(result.status === 'duplicate' ? 'Ya estás registrado' : 'Correo no permitido', result.message);
             return;
           }
 
