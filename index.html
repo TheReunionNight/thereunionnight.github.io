@@ -3625,7 +3625,7 @@
       } catch (err) {
         emailStatusBanner.classList.add('warning');
         emailStatusBanner.innerHTML = `
-          <strong>Registro procesado:</strong> Verifica tu bandeja de entrada en <strong>${escapeHtml(emailVal)}</strong> (y tu hoja de Google Sheets). También puedes descargar tu tarjeta PNG directamente aquí abajo.
+          <strong>Registro procesado:</strong> Verifica tu bandeja de entrada en <strong>${escapeHtml(emailVal)}</strong> .También puedes descargar tu tarjeta PNG directamente aquí abajo.
         `;
       } finally {
         btnSubmitForm.disabled = false;
