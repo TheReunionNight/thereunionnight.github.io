@@ -63,7 +63,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      padding: 12px 5%;
+      padding: 10px 5%;
       background: rgba(24, 27, 36, 0.96);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.18);
@@ -73,77 +73,17 @@
     .nav-brand {
       display: flex;
       align-items: center;
-      gap: 11px;
       text-decoration: none;
-      color: #FFFFFF;
       flex-shrink: 0;
     }
 
-    .nav-tree-badge {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: var(--esan-red);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      overflow: hidden;
-    }
-
-    .nav-brand-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.05;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    .nav-mini-row1 {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 8px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      color: #FFFFFF;
-      margin-bottom: 2px;
-    }
-
-    .nav-mini-line {
-      height: 1.5px;
-      flex: 1;
-      background: var(--esan-red);
-      min-width: 18px;
-    }
-
-    .nav-mini-reunion {
-      display: inline-block;
-      background: #FFFFFF;
-      color: #000000;
-      font-size: 11.5px;
-      font-weight: 900;
-      letter-spacing: 0.04em;
-      padding: 1.5px 5px;
-      border-radius: 2px;
-      margin-bottom: 2px;
-    }
-
-    .nav-mini-night {
-      font-size: 11.5px;
-      font-weight: 900;
-      letter-spacing: 0.04em;
-      color: #FFFFFF;
-      margin-bottom: 1px;
-    }
-
-    .nav-mini-row4 {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 7.5px;
-      font-weight: 500;
-      letter-spacing: 0.16em;
-      color: #E5E7EB;
+    .nav-logo-img {
+      height: 46px;
+      width: auto;
+      max-width: 210px;
+      object-fit: contain;
+      display: block;
+      mix-blend-mode: lighten;
     }
 
     .nav-links {
@@ -208,7 +148,7 @@
     .mobile-drawer {
       display: none;
       position: fixed;
-      top: 68px;
+      top: 66px;
       left: 0;
       right: 0;
       background: rgba(24, 27, 36, 0.98);
@@ -247,7 +187,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 120px 20px 64px;
+      padding: 116px 20px 64px;
       overflow: hidden;
       background-color: #000000;
       color: #FFFFFF;
@@ -300,7 +240,7 @@
       font-weight: 700;
       letter-spacing: 0.14em;
       color: #FFFFFF;
-      margin-bottom: 30px;
+      margin-bottom: 22px;
       position: relative;
       z-index: 2;
       max-width: 92vw;
@@ -315,93 +255,30 @@
       flex-shrink: 0;
     }
 
-    /* LOCKUP CENTRAL IDÉNTICO AL LOGO OFICIAL */
-    .hero-lockup {
+    /* LOGO OFICIAL DESDE CARPETA img/ */
+    .hero-logo-wrapper {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 28px;
-      margin-bottom: 26px;
+      margin: 0 auto 20px;
       position: relative;
       z-index: 2;
+      width: 100%;
     }
 
-    .lockup-emblem {
-      width: 132px;
-      height: 132px;
-      border-radius: 50%;
-      background: var(--esan-red);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      overflow: hidden;
-    }
-
-    .lockup-words {
-      text-align: left;
-      font-family: 'Montserrat', sans-serif;
-      display: inline-flex;
-      flex-direction: column;
-    }
-
-    .lockup-row-top {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      font-size: clamp(20px, 2.6vw, 28px);
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      color: #FFFFFF;
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-
-    .lockup-line {
-      height: 3.5px;
-      flex: 1;
-      background: var(--esan-red);
-      min-width: 70px;
-    }
-
-    .lockup-reunion {
-      display: inline-block;
-      background: #FFFFFF;
-      border-radius: 2px;
-      color: #000000;
-      font-size: clamp(34px, 5.2vw, 56px);
-      font-weight: 900;
-      line-height: 1;
-      padding: 8px 18px;
-      letter-spacing: 0.04em;
-      margin-bottom: 8px;
-    }
-
-    .lockup-night {
-      font-size: clamp(34px, 5.2vw, 56px);
-      font-weight: 900;
-      line-height: 1;
-      color: #FFFFFF;
-      letter-spacing: 0.04em;
-      margin-bottom: 8px;
-    }
-
-    .lockup-row-bottom {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      font-size: clamp(20px, 2.5vw, 27px);
-      font-weight: 400;
-      letter-spacing: 0.2em;
-      color: #E5E7EB;
-      line-height: 1;
+    .hero-logo-img {
+      width: min(560px, 88vw);
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      mix-blend-mode: lighten;
     }
 
     .hero-red-divider {
       width: 56px;
       height: 3px;
       background: var(--esan-red);
-      margin: 4px auto 22px;
+      margin: 2px auto 20px;
       position: relative;
       z-index: 2;
     }
@@ -428,7 +305,7 @@
       border: 1px solid rgba(255, 255, 255, 0.2);
       font-size: 13.5px;
       color: #F3F4F6;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
       position: relative;
       z-index: 2;
       max-width: 92vw;
@@ -486,7 +363,7 @@
     }
 
     .scroll-cue {
-      margin-top: 40px;
+      margin-top: 36px;
       display: inline-flex;
       flex-direction: column;
       align-items: center;
@@ -1708,6 +1585,25 @@
       line-height: 1;
     }
 
+    .modal-logo-circle {
+      margin: 0 auto 12px;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #000000;
+      position: relative;
+    }
+
+    .modal-logo-circle img {
+      width: 156px;
+      height: 88px;
+      max-width: none;
+      margin-left: -10px;
+      margin-top: -17px;
+      display: block;
+    }
+
     .email-status-banner {
       background: #F0FDF4;
       border: 1px solid #BBF7D0;
@@ -1849,7 +1745,11 @@
 
     @media (max-width: 640px) {
       .navbar {
-        padding: 11px 4%;
+        padding: 9px 4%;
+      }
+      .nav-logo-img {
+        height: 38px;
+        max-width: 170px;
       }
       .btn-nav-cta {
         padding: 9px 14px;
@@ -1857,7 +1757,7 @@
       }
       .hero {
         min-height: auto;
-        padding: 102px 16px 52px;
+        padding: 98px 16px 52px;
       }
       .net-1 { top: 11%; left: 3%; width: 54px; opacity: 0.4; }
       .net-2 { top: 12%; right: 3%; width: 56px; opacity: 0.4; }
@@ -1866,33 +1766,10 @@
         font-size: 9.5px;
         letter-spacing: 0.1em;
         padding: 7px 14px;
-        margin-bottom: 24px;
+        margin-bottom: 20px;
       }
-      .hero-lockup {
-        flex-direction: column;
-        gap: 16px;
-      }
-      .lockup-emblem {
-        width: 96px;
-        height: 96px;
-      }
-      .lockup-emblem svg {
-        width: 96px;
-        height: 96px;
-      }
-      .lockup-words {
-        text-align: center;
-        align-items: center;
-      }
-      .lockup-row-top,
-      .lockup-row-bottom {
-        justify-content: center;
-        font-size: 18px;
-        width: 100%;
-      }
-      .lockup-line {
-        min-width: 42px;
-        flex: 1;
+      .hero-logo-img {
+        width: min(370px, 92vw);
       }
       .hero-location {
         flex-direction: column;
@@ -1984,62 +1861,38 @@
       .btn-nav-cta span {
         display: none;
       }
-      .lockup-reunion,
-      .lockup-night {
-        font-size: 28px;
+      .nav-logo-img {
+        height: 34px;
+        max-width: 148px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- ================= DEFINICIONES SVG REUTILIZABLES (PINO ORGÁNICO ESAN/STANFORD) ================= -->
+  <!-- ================= SILUETA PARA MARCA DE AGUA DEL MODAL ================= -->
   <svg width="0" height="0" style="position:absolute; visibility:hidden;" aria-hidden="true">
     <defs>
-      <symbol id="esan-pine-silhouette" viewBox="0 0 100 100">
-        <path fill="currentColor" fill-rule="evenodd" d="
-          M50 7
-          L51.6 11.2 L54.4 11.8 L51.6 13.4 L52.3 15.8 L56.5 17 L52.6 18.6 L58.2 21.4 L53.2 23 L60 26.2 L54.2 27.8
+      <symbol id="esan-pine-watermark" viewBox="0 0 100 100">
+        <path fill="currentColor" d="
+          M50 7 L51.6 11.2 L54.4 11.8 L51.6 13.4 L52.3 15.8 L56.5 17 L52.6 18.6 L58.2 21.4 L53.2 23 L60 26.2 L54.2 27.8
           L62.5 31.6 L56.2 33.2 L64.8 37.5 L57.5 39 L67.2 44 L59 45.6 L69.8 51 L60.5 52.6
           L72.8 58 L62 59.6 L74.8 65.2 L63 67 L76.8 72.8 L64.2 74.8
           L78.5 80.5 L64.8 82.4 L75.2 87.8 L60.8 88.6 L66.5 91.5 L52.6 90.8
           L52.6 98.5 L47.4 98.5 L47.4 90.8
           L33.5 91.6 L39.4 88.6 L24.8 87.6 L35.8 82.2 L21.8 80.2 L36 74.5 L23.5 72.5 L37.2 66.8 L25.5 65 L38.2 59.4 L27.5 57.8 L39.8 52.4 L30.2 50.8 L41.2 45.4 L33 43.8 L42.8 38.8 L35.5 37.2 L44 33 L37.8 31.4 L45.8 27.6 L40.2 26 L46.8 22.8 L42 21.2 L47.6 18.4 L43.8 16.8 L48.2 15.2 L46 13.2 L48.6 11.6 Z
-          M51.2 29.5 L55.6 30.2 L51.8 31.8 Z
-          M41.5 47.5 L47.2 48.2 L42.5 49.8 Z
-          M52.2 55 L58.8 55.6 L53 57.5 Z
-          M38.8 69.2 L46.2 69.8 L40.2 71.8 Z
-          M51.8 76.2 L59.6 76.8 L52.8 78.8 Z
         "/>
-      </symbol>
-
-      <symbol id="esan-pine-emblem" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="49" fill="#E30613"/>
-        <use href="#esan-pine-silhouette" style="color:#FFFFFF;"/>
       </symbol>
     </defs>
   </svg>
 
-  <!-- ================= NAVBAR (DIFERENCIADA DEL FONDO NEGRO) ================= -->
+  <!-- ================= NAVBAR (DIFERENCIADA DEL FONDO NEGRO + LOGO DE CARPETA img/) ================= -->
   <nav class="navbar">
     <a href="#" class="nav-brand">
-      <div class="nav-tree-badge" aria-hidden="true">
-        <svg width="40" height="40" viewBox="0 0 100 100">
-          <use href="#esan-pine-emblem"/>
-        </svg>
-      </div>
-      <div class="nav-brand-text">
-        <div class="nav-mini-row1">
-          <span>THE</span>
-          <span class="nav-mini-line"></span>
-        </div>
-        <div class="nav-mini-reunion">REUNION</div>
-        <div class="nav-mini-night">NIGHT</div>
-        <div class="nav-mini-row4">
-          <span>MASTERS</span>
-          <span class="nav-mini-line"></span>
-        </div>
-      </div>
+      <img src="img/logo%20rn%20negro_2.png"
+           onerror="this.onerror=null;this.src='img/logo%20rn%20negro.png';"
+           alt="THE REUNION NIGHT: MASTERS"
+           class="nav-logo-img">
     </a>
 
     <div class="nav-links">
@@ -2072,7 +1925,7 @@
     <a href="#registro" style="color:#E30613;">Registrarme y Generar QR &rarr;</a>
   </div>
 
-  <!-- ================= HERO COVER (FONDO NEGRO #000000 + LOGO OFICIAL) ================= -->
+  <!-- ================= HERO COVER (FONDO NEGRO #000000 + LOGO OFICIAL DE img/) ================= -->
   <header class="hero">
     <div class="hero-grid-floor"></div>
 
@@ -2244,24 +2097,12 @@
       MAESTRÍAS ESPECIALIZADAS Y MBA ESAN &bull; EL LEGADO DE STANFORD
     </div>
 
-    <div class="hero-lockup">
-      <div class="lockup-emblem" aria-hidden="true">
-        <svg width="132" height="132" viewBox="0 0 100 100">
-          <use href="#esan-pine-emblem"/>
-        </svg>
-      </div>
-      <div class="lockup-words">
-        <div class="lockup-row-top">
-          <span>THE</span>
-          <span class="lockup-line"></span>
-        </div>
-        <div class="lockup-reunion">REUNION</div>
-        <div class="lockup-night">NIGHT</div>
-        <div class="lockup-row-bottom">
-          <span>MASTERS</span>
-          <span class="lockup-line"></span>
-        </div>
-      </div>
+    <!-- IMAGEN OFICIAL DE TU CARPETA img/ (CON EL PINO ORIGINAL) -->
+    <div class="hero-logo-wrapper">
+      <img src="img/logo%20rn%20negro_2.png"
+           onerror="this.onerror=null;this.src='img/logo%20rn%20negro.png';"
+           alt="THE REUNION NIGHT: MASTERS - ESAN"
+           class="hero-logo-img">
     </div>
 
     <div class="hero-red-divider"></div>
@@ -2417,10 +2258,10 @@
 
       <div class="esan-modal-watermark" aria-hidden="true">
         <svg width="78" height="122" viewBox="0 0 100 100" preserveAspectRatio="none" style="color:#4A4A4A;">
-          <use href="#esan-pine-silhouette"/>
+          <use href="#esan-pine-watermark"/>
         </svg>
         <svg width="128" height="205" viewBox="0 0 100 100" preserveAspectRatio="none" style="color:#4A4A4A;">
-          <use href="#esan-pine-silhouette"/>
+          <use href="#esan-pine-watermark"/>
         </svg>
       </div>
     </div>
@@ -2446,9 +2287,6 @@
               <div class="venue-placeholder-graphic" style="display:none;">
                 <svg width="160" height="84" viewBox="0 0 220 110" fill="none">
                   <rect x="40" y="10" width="140" height="62" rx="8" stroke="#E30613" stroke-width="2"/>
-                  <svg x="92" y="23" width="36" height="36" viewBox="0 0 100 100">
-                    <use href="#esan-pine-emblem"/>
-                  </svg>
                   <ellipse cx="110" cy="88" rx="95" ry="12" stroke="#4A4A4A" stroke-width="1.5"/>
                 </svg>
               </div>
@@ -2841,10 +2679,10 @@
   <div class="modal-backdrop" id="confirmModal">
     <div class="modal-box">
       <button type="button" class="modal-close" id="closeModalBtn">&times;</button>
-      <div style="margin: 0 auto 12px; width: 52px; height: 52px; border-radius: 50%; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-        <svg width="52" height="52" viewBox="0 0 100 100">
-          <use href="#esan-pine-emblem"/>
-        </svg>
+      <div class="modal-logo-circle" aria-hidden="true">
+        <img src="img/logo%20rn%20negro_2.png"
+             onerror="this.onerror=null;this.src='img/logo%20rn%20negro.png';"
+             alt="">
       </div>
       <h3 style="font-size: 21px; font-weight: 900; margin-bottom: 6px; color: #2B2B2B;">¡Asistencia Confirmada!</h3>
       <p style="color: #5F6368; font-size: 13.5px; margin-bottom: 14px;">
@@ -3392,7 +3230,7 @@
       updatePreview();
     });
 
-    // ================= 5. GENERADOR DE FICHA PNG OFICIAL =================
+    // ================= 5. GENERADOR DE FICHA PNG OFICIAL (USA TU LOGO REAL DE img/) =================
     async function loadQrImageForCanvas(linkedinUrl) {
       const qrApiUrl = getValidQrApiUrl(linkedinUrl);
       return new Promise((resolve) => {
@@ -3404,6 +3242,20 @@
       });
     }
 
+    async function loadOfficialLogoForCanvas() {
+      const candidates = ['img/logo%20rn%20negro_2.png', 'img/logo%20rn%20negro.png'];
+      for (const src of candidates) {
+        const img = await new Promise((resolve) => {
+          const el = new Image();
+          el.onload = () => resolve(el);
+          el.onerror = () => resolve(null);
+          el.src = src;
+        });
+        if (img) return img;
+      }
+      return null;
+    }
+
     async function buildOfficialBadgeCanvas() {
       const canvas = document.createElement('canvas');
       canvas.width = 1080;
@@ -3413,30 +3265,28 @@
       ctx.fillStyle = '#000000';
       ctx.fillRect(0, 0, 1080, 1540);
 
-      ctx.fillStyle = '#181B24';
-      ctx.fillRect(0, 0, 1080, 195);
+      const logoImg = await loadOfficialLogoForCanvas();
+      if (logoImg) {
+        const logoH = 148;
+        const logoW = Math.round((logoImg.naturalWidth / logoImg.naturalHeight) * logoH);
+        ctx.drawImage(logoImg, 74, 24, logoW, logoH);
 
-      ctx.fillStyle = '#E30613';
-      ctx.beginPath();
-      ctx.arc(130, 98, 36, 0, Math.PI * 2);
-      ctx.fill();
+        ctx.fillStyle = '#D4D4D4';
+        ctx.font = '700 18px Montserrat, sans-serif';
+        ctx.textAlign = 'right';
+        ctx.fillText('ESAN GRADUATE SCHOOL', 1006, 92);
+        ctx.fillText('4 DE DICIEMBRE • 18:30 HRS', 1006, 120);
+        ctx.textAlign = 'left';
+      } else {
+        ctx.fillStyle = '#FFFFFF';
+        ctx.font = '800 28px Montserrat, sans-serif';
+        ctx.fillText('THE REUNION NIGHT: MASTERS', 80, 95);
+        ctx.fillStyle = '#D4D4D4';
+        ctx.font = '700 18px Montserrat, sans-serif';
+        ctx.fillText('ESAN GRADUATE SCHOOL OF BUSINESS  •  4 DE DICIEMBRE', 80, 125);
+      }
 
-      ctx.save();
-      ctx.translate(94, 62);
-      ctx.scale(0.72, 0.72);
-      const pinePath = new Path2D("M50 7 L51.6 11.2 L54.4 11.8 L51.6 13.4 L52.3 15.8 L56.5 17 L52.6 18.6 L58.2 21.4 L53.2 23 L60 26.2 L54.2 27.8 L62.5 31.6 L56.2 33.2 L64.8 37.5 L57.5 39 L67.2 44 L59 45.6 L69.8 51 L60.5 52.6 L72.8 58 L62 59.6 L74.8 65.2 L63 67 L76.8 72.8 L64.2 74.8 L78.5 80.5 L64.8 82.4 L75.2 87.8 L60.8 88.6 L66.5 91.5 L52.6 90.8 L52.6 98.5 L47.4 98.5 L47.4 90.8 L33.5 91.6 L39.4 88.6 L24.8 87.6 L35.8 82.2 L21.8 80.2 L36 74.5 L23.5 72.5 L37.2 66.8 L25.5 65 L38.2 59.4 L27.5 57.8 L39.8 52.4 L30.2 50.8 L41.2 45.4 L33 43.8 L42.8 38.8 L35.5 37.2 L44 33 L37.8 31.4 L45.8 27.6 L40.2 26 L46.8 22.8 L42 21.2 L47.6 18.4 L43.8 16.8 L48.2 15.2 L46 13.2 L48.6 11.6 Z");
-      ctx.fillStyle = '#FFFFFF';
-      ctx.fill(pinePath);
-      ctx.restore();
-
-      ctx.fillStyle = '#FFFFFF';
-      ctx.font = '800 28px Montserrat, sans-serif';
-      ctx.fillText('THE REUNION NIGHT: MASTERS', 188, 95);
-      ctx.fillStyle = '#D4D4D4';
-      ctx.font = '700 18px Montserrat, sans-serif';
-      ctx.fillText('ESAN GRADUATE SCHOOL OF BUSINESS  •  4 DE DICIEMBRE', 188, 125);
-
-      const cardX = 70, cardY = 235, cardW = 940, cardH = 1215, r = 32;
+      const cardX = 70, cardY = 205, cardW = 940, cardH = 1245, r = 32;
       ctx.fillStyle = '#FFFFFF';
       roundRect(ctx, cardX, cardY, cardW, cardH, r);
       ctx.fill();
@@ -3444,7 +3294,7 @@
       ctx.fillStyle = state.isEntrepreneur ? '#E30613' : '#2B2F3C';
       ctx.fillRect(cardX + 40, cardY, cardW - 80, 14);
 
-      const boxX = 130, boxY = 295, boxS = 160;
+      const boxX = 130, boxY = 268, boxS = 160;
       ctx.fillStyle = '#0B0E17';
       roundRect(ctx, boxX, boxY, boxS, boxS, 24);
       ctx.fill();
@@ -3462,64 +3312,64 @@
       const roleStr = `${inputRole.value.trim() || 'Director General'} • ${inputCompany.value.trim() || 'TechSol Perú'}`;
       ctx.fillStyle = '#1F2937';
       ctx.font = '900 38px Montserrat, sans-serif';
-      wrapText(ctx, nameStr, 325, 348, 625, 44);
+      wrapText(ctx, nameStr, 325, 322, 625, 44);
 
       ctx.fillStyle = '#5F6368';
       ctx.font = '600 24px Plus Jakarta Sans, sans-serif';
-      ctx.fillText(roleStr.slice(0, 48), 325, 434);
+      ctx.fillText(roleStr.slice(0, 48), 325, 408);
 
       const progText = (inputProgram.value || 'MBA - MAESTRÍA EN ADMINISTRACIÓN DE EMPRESAS').toUpperCase();
       ctx.fillStyle = '#2B2F3C';
-      roundRect(ctx, 130, 486, 820, 46, 12);
+      roundRect(ctx, 130, 460, 820, 46, 12);
       ctx.fill();
       ctx.fillStyle = '#FFFFFF';
       ctx.font = '800 17px Montserrat, sans-serif';
-      ctx.fillText(progText.slice(0, 62), 152, 515);
+      ctx.fillText(progText.slice(0, 62), 152, 489);
 
       ctx.fillStyle = state.isEntrepreneur ? '#E30613' : '#0B0E17';
-      roundRect(ctx, 130, 544, 300, 42, 12);
+      roundRect(ctx, 130, 518, 300, 42, 12);
       ctx.fill();
       ctx.fillStyle = '#FFFFFF';
       ctx.font = '800 16px Montserrat, sans-serif';
-      ctx.fillText(state.isEntrepreneur ? 'EMPRENDIMIENTO' : 'PERFIL CORPORATIVO', 152, 571);
+      ctx.fillText(state.isEntrepreneur ? 'EMPRENDIMIENTO' : 'PERFIL CORPORATIVO', 152, 545);
 
       ctx.fillStyle = '#F5F6F8';
-      roundRect(ctx, 130, 616, 820, 185, 22);
+      roundRect(ctx, 130, 590, 820, 195, 22);
       ctx.fill();
 
       ctx.fillStyle = state.isEntrepreneur ? '#E30613' : '#2B2F3C';
       ctx.font = '800 20px Montserrat, sans-serif';
-      ctx.fillText(state.isEntrepreneur ? 'SOBRE MI EMPRENDIMIENTO:' : 'ESPECIALIDAD CORPORATIVA:', 165, 664);
+      ctx.fillText(state.isEntrepreneur ? 'SOBRE MI EMPRENDIMIENTO:' : 'ESPECIALIDAD CORPORATIVA:', 165, 640);
 
       ctx.fillStyle = '#1F2937';
       ctx.font = '700 27px Plus Jakarta Sans, sans-serif';
       const pitchStr = inputPitch.value.trim() || (state.isEntrepreneur
         ? 'Desarrollamos software financiero para optimizar PYMES'
         : 'Dirección estratégica y transformación financiera');
-      wrapText(ctx, pitchStr, 165, 714, 750, 38);
+      wrapText(ctx, pitchStr, 165, 692, 750, 38);
 
       ctx.strokeStyle = '#E2E5E9';
       ctx.lineWidth = 2;
       ctx.beginPath();
-      ctx.moveTo(130, 845);
-      ctx.lineTo(950, 845);
+      ctx.moveTo(130, 830);
+      ctx.lineTo(950, 830);
       ctx.stroke();
 
       ctx.fillStyle = '#2B2B2B';
       ctx.font = '800 22px Montserrat, sans-serif';
-      ctx.fillText('OFREZCO:', 130, 910);
+      ctx.fillText('OFREZCO:', 130, 895);
       ctx.fillStyle = '#5F6368';
       ctx.font = '500 25px Plus Jakarta Sans, sans-serif';
-      wrapText(ctx, inputOffer.value.trim() || 'Consultoría B2B y desarrollo web', 130, 952, 470, 34);
+      wrapText(ctx, inputOffer.value.trim() || 'Consultoría B2B y desarrollo web', 130, 938, 470, 34);
 
       ctx.fillStyle = '#2B2B2B';
       ctx.font = '800 22px Montserrat, sans-serif';
-      ctx.fillText('BUSCO:', 130, 1090);
+      ctx.fillText('BUSCO:', 130, 1080);
       ctx.fillStyle = '#5F6368';
       ctx.font = '500 25px Plus Jakarta Sans, sans-serif';
-      wrapText(ctx, inputSeek.value.trim() || 'Socios comerciales e inversionistas', 130, 1132, 470, 34);
+      wrapText(ctx, inputSeek.value.trim() || 'Socios comerciales e inversionistas', 130, 1122, 470, 34);
 
-      const qrBoxX = 650, qrBoxY = 895, qrBoxS = 290;
+      const qrBoxX = 650, qrBoxY = 880, qrBoxS = 290;
       ctx.strokeStyle = '#2B2B2B';
       ctx.lineWidth = 4;
       roundRect(ctx, qrBoxX, qrBoxY, qrBoxS, qrBoxS, 22);
