@@ -3500,10 +3500,12 @@
         });
 
         const result = await response.json();
-
-        if (result.status === 'duplicate') {
-          mostrarAvisoESAN('Ya estás registrado', result.message);
-          return;
+        if (result.status !== 'success') {
+          mostrarAvisoESAN(
+            result.status === 'duplicate' ? 'Ya estás registrado' : 'Registro no validado',
+            result.message
+        );
+        return;
         }
 
         if (result.status === 'pending_validation') {
