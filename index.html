@@ -52,7 +52,7 @@
       font-family: 'Montserrat', sans-serif;
     }
 
-    /* ================== NAVBAR RESPONSIVE ================= */
+    /* ================== NAVBAR RESPONSIVE (TONO DIFERENCIADO #181B24) ================= */
     .navbar {
       position: fixed;
       top: 0;
@@ -63,24 +63,25 @@
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      padding: 14px 5%;
-      background: rgba(8, 10, 16, 0.95);
+      padding: 12px 5%;
+      background: rgba(24, 27, 36, 0.96);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.65);
     }
 
     .nav-brand {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 11px;
       text-decoration: none;
       color: #FFFFFF;
       flex-shrink: 0;
     }
 
     .nav-tree-badge {
-      width: 36px;
-      height: 36px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       background: var(--esan-red);
       display: flex;
@@ -93,28 +94,56 @@
     .nav-brand-text {
       display: flex;
       flex-direction: column;
-      line-height: 1.2;
+      line-height: 1.05;
       font-family: 'Montserrat', sans-serif;
+    }
+
+    .nav-mini-row1 {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 8px;
       font-weight: 800;
-      font-size: 11px;
       letter-spacing: 0.08em;
       color: #FFFFFF;
+      margin-bottom: 2px;
     }
 
-    .nav-brand-text span.highlight {
-      background: transparent;
-      border: 1.5px solid #FFFFFF;
-      border-radius: 5px;
+    .nav-mini-line {
+      height: 1.5px;
+      flex: 1;
+      background: var(--esan-red);
+      min-width: 18px;
+    }
+
+    .nav-mini-reunion {
+      display: inline-block;
+      background: #FFFFFF;
+      color: #000000;
+      font-size: 11.5px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      padding: 1.5px 5px;
+      border-radius: 2px;
+      margin-bottom: 2px;
+    }
+
+    .nav-mini-night {
+      font-size: 11.5px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
       color: #FFFFFF;
-      padding: 1px 6px;
-      margin-left: 3px;
+      margin-bottom: 1px;
     }
 
-    .nav-brand-text small {
-      font-size: 9px;
-      color: #D4D4D4;
+    .nav-mini-row4 {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 7.5px;
+      font-weight: 500;
       letter-spacing: 0.16em;
-      margin-top: 2px;
+      color: #E5E7EB;
     }
 
     .nav-links {
@@ -179,12 +208,12 @@
     .mobile-drawer {
       display: none;
       position: fixed;
-      top: 67px;
+      top: 68px;
       left: 0;
       right: 0;
-      background: rgba(11, 14, 23, 0.98);
+      background: rgba(24, 27, 36, 0.98);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
       padding: 16px 6% 22px;
       z-index: 99;
       flex-direction: column;
@@ -209,7 +238,7 @@
       border-bottom: none;
     }
 
-    /* ================= HERO SECTION ================= */
+    /* ================= HERO SECTION (FONDO NEGRO PURO #000000) ================= */
     .hero {
       position: relative;
       min-height: 94vh;
@@ -218,13 +247,9 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 116px 20px 64px;
+      padding: 120px 20px 64px;
       overflow: hidden;
-      background:
-        radial-gradient(circle at 18% 22%, rgba(227, 6, 19, 0.34) 0%, transparent 46%),
-        radial-gradient(circle at 84% 25%, rgba(30, 64, 175, 0.28) 0%, transparent 48%),
-        radial-gradient(circle at 50% 82%, rgba(212, 175, 55, 0.14) 0%, transparent 50%),
-        linear-gradient(145deg, #0B0E17 0%, #161C2E 52%, #1D0F16 100%);
+      background-color: #000000;
       color: #FFFFFF;
     }
 
@@ -235,20 +260,19 @@
       right: -10%;
       height: 300px;
       background-image:
-        linear-gradient(to right, rgba(255, 255, 255, 0.09) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.09) 1px, transparent 1px);
+        linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
       background-size: 64px 42px;
       transform: perspective(480px) rotateX(66deg);
-      mask-image: linear-gradient(to top, rgba(0,0,0,0.8), transparent 85%);
+      mask-image: linear-gradient(to top, rgba(0,0,0,0.75), transparent 85%);
       pointer-events: none;
     }
 
     .network-float {
       position: absolute;
       pointer-events: none;
-      opacity: 0.94;
+      opacity: 0.72;
       animation: floatNetwork 8s ease-in-out infinite;
-      filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.85)) drop-shadow(0 10px 24px rgba(0, 0, 0, 0.45));
     }
 
     .net-1 { top: 15%; left: 7.5%; width: 112px; animation-delay: 0s; }
@@ -268,8 +292,8 @@
       gap: 10px;
       padding: 8px 20px;
       border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.24);
-      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(8px);
       font-family: 'Montserrat', sans-serif;
       font-size: 11px;
@@ -291,25 +315,25 @@
       flex-shrink: 0;
     }
 
+    /* LOCKUP CENTRAL IDÉNTICO AL LOGO OFICIAL */
     .hero-lockup {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 26px;
-      margin-bottom: 24px;
+      gap: 28px;
+      margin-bottom: 26px;
       position: relative;
       z-index: 2;
     }
 
     .lockup-emblem {
-      width: 98px;
-      height: 98px;
+      width: 132px;
+      height: 132px;
       border-radius: 50%;
       background: var(--esan-red);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 0 36px rgba(227, 6, 19, 0.45), 0 12px 32px rgba(0, 0, 0, 0.35);
       flex-shrink: 0;
       overflow: hidden;
     }
@@ -317,43 +341,44 @@
     .lockup-words {
       text-align: left;
       font-family: 'Montserrat', sans-serif;
+      display: inline-flex;
+      flex-direction: column;
     }
 
     .lockup-row-top {
       display: flex;
       align-items: center;
       gap: 14px;
-      font-size: 24px;
+      font-size: clamp(20px, 2.6vw, 28px);
       font-weight: 800;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.08em;
       color: #FFFFFF;
+      line-height: 1;
       margin-bottom: 8px;
     }
 
     .lockup-line {
-      height: 3px;
+      height: 3.5px;
       flex: 1;
       background: var(--esan-red);
-      min-width: 80px;
+      min-width: 70px;
     }
 
     .lockup-reunion {
       display: inline-block;
-      background: rgba(255, 255, 255, 0.04);
-      border: 2.5px solid #FFFFFF;
-      border-radius: 12px;
-      color: #FFFFFF;
-      font-size: clamp(32px, 5vw, 54px);
+      background: #FFFFFF;
+      border-radius: 2px;
+      color: #000000;
+      font-size: clamp(34px, 5.2vw, 56px);
       font-weight: 900;
       line-height: 1;
-      padding: 8px 20px;
-      letter-spacing: 0.05em;
+      padding: 8px 18px;
+      letter-spacing: 0.04em;
       margin-bottom: 8px;
-      box-shadow: 0 0 24px rgba(255, 255, 255, 0.12);
     }
 
     .lockup-night {
-      font-size: clamp(32px, 5vw, 54px);
+      font-size: clamp(34px, 5.2vw, 56px);
       font-weight: 900;
       line-height: 1;
       color: #FFFFFF;
@@ -365,10 +390,11 @@
       display: flex;
       align-items: center;
       gap: 14px;
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: 0.24em;
-      color: #F1F5F9;
+      font-size: clamp(20px, 2.5vw, 27px);
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      color: #E5E7EB;
+      line-height: 1;
     }
 
     .hero-red-divider {
@@ -399,7 +425,7 @@
       border-radius: 999px;
       background: rgba(255, 255, 255, 0.07);
       backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.22);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       font-size: 13.5px;
       color: #F3F4F6;
       margin-bottom: 30px;
@@ -418,7 +444,7 @@
       border-radius: 999px;
       overflow: hidden;
       border: 1px solid rgba(255, 255, 255, 0.28);
-      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.36);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
       text-decoration: none;
       position: relative;
       z-index: 2;
@@ -433,7 +459,7 @@
     }
 
     .save-date-left {
-      background: #080A10;
+      background: #141720;
       color: #FFFFFF;
       font-family: 'Montserrat', sans-serif;
       font-weight: 800;
@@ -1744,7 +1770,8 @@
 
     /* ================= FOOTER ================= */
     footer {
-      background: #080A10;
+      background: #141720;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
       padding: 40px 6%;
       text-align: center;
       color: #BDBDBD;
@@ -1808,7 +1835,7 @@
       }
       .net-1, .net-2, .net-3, .net-4 {
         width: 72px;
-        opacity: 0.65;
+        opacity: 0.55;
       }
       .esan-detail-modal {
         padding: 36px 28px 38px;
@@ -1822,7 +1849,7 @@
 
     @media (max-width: 640px) {
       .navbar {
-        padding: 12px 4%;
+        padding: 11px 4%;
       }
       .btn-nav-cta {
         padding: 9px 14px;
@@ -1830,10 +1857,10 @@
       }
       .hero {
         min-height: auto;
-        padding: 98px 16px 52px;
+        padding: 102px 16px 52px;
       }
-      .net-1 { top: 11%; left: 3%; width: 54px; opacity: 0.45; }
-      .net-2 { top: 12%; right: 3%; width: 56px; opacity: 0.45; }
+      .net-1 { top: 11%; left: 3%; width: 54px; opacity: 0.4; }
+      .net-2 { top: 12%; right: 3%; width: 56px; opacity: 0.4; }
       .net-3, .net-4 { display: none; }
       .hero-pill-top {
         font-size: 9.5px;
@@ -1843,27 +1870,29 @@
       }
       .hero-lockup {
         flex-direction: column;
-        gap: 14px;
+        gap: 16px;
       }
       .lockup-emblem {
-        width: 80px;
-        height: 80px;
+        width: 96px;
+        height: 96px;
       }
       .lockup-emblem svg {
-        width: 80px;
-        height: 80px;
+        width: 96px;
+        height: 96px;
       }
       .lockup-words {
         text-align: center;
+        align-items: center;
       }
       .lockup-row-top,
       .lockup-row-bottom {
         justify-content: center;
         font-size: 18px;
+        width: 100%;
       }
       .lockup-line {
         min-width: 42px;
-        flex: 0 1 56px;
+        flex: 1;
       }
       .hero-location {
         flex-direction: column;
@@ -1952,9 +1981,6 @@
     }
 
     @media (max-width: 380px) {
-      .nav-brand-text {
-        font-size: 9.5px;
-      }
       .btn-nav-cta span {
         display: none;
       }
@@ -1994,17 +2020,25 @@
     </defs>
   </svg>
 
-  <!-- ================= NAVBAR ================= -->
+  <!-- ================= NAVBAR (DIFERENCIADA DEL FONDO NEGRO) ================= -->
   <nav class="navbar">
     <a href="#" class="nav-brand">
       <div class="nav-tree-badge" aria-hidden="true">
-        <svg width="36" height="36" viewBox="0 0 100 100">
+        <svg width="40" height="40" viewBox="0 0 100 100">
           <use href="#esan-pine-emblem"/>
         </svg>
       </div>
       <div class="nav-brand-text">
-        <span>THE <span class="highlight">REUNION</span></span>
-        <span>NIGHT <small>MASTERS</small></span>
+        <div class="nav-mini-row1">
+          <span>THE</span>
+          <span class="nav-mini-line"></span>
+        </div>
+        <div class="nav-mini-reunion">REUNION</div>
+        <div class="nav-mini-night">NIGHT</div>
+        <div class="nav-mini-row4">
+          <span>MASTERS</span>
+          <span class="nav-mini-line"></span>
+        </div>
       </div>
     </a>
 
@@ -2038,170 +2072,170 @@
     <a href="#registro" style="color:#E30613;">Registrarme y Generar QR &rarr;</a>
   </div>
 
-  <!-- ================= HERO COVER ================= -->
+  <!-- ================= HERO COVER (FONDO NEGRO #000000 + LOGO OFICIAL) ================= -->
   <header class="hero">
     <div class="hero-grid-floor"></div>
 
     <!-- Ícono B&N 1 (Superior Izquierda) -->
     <svg class="network-float net-1" viewBox="0 0 120 120" fill="none" aria-hidden="true">
-      <path d="M22 10 L23.8 14.5 L28.5 16.2 L23.8 18 L22 22.5 L20.2 18 L15.5 16.2 L20.2 14.5 Z" fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
-      <circle cx="38" cy="7" r="2.2" fill="#000000" stroke="#FFFFFF" stroke-width="0.8"/>
-      <path d="M104 60 L105.5 63.5 L109 65 L105.5 66.5 L104 70 L102.5 66.5 L99 65 L102.5 63.5 Z" fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+      <path d="M22 10 L23.8 14.5 L28.5 16.2 L23.8 18 L22 22.5 L20.2 18 L15.5 16.2 L20.2 14.5 Z" fill="#FFFFFF"/>
+      <circle cx="38" cy="7" r="2.2" fill="#FFFFFF"/>
+      <path d="M104 60 L105.5 63.5 L109 65 L105.5 66.5 L104 70 L102.5 66.5 L99 65 L102.5 63.5 Z" fill="#FFFFFF"/>
       <path d="M95 102 H103 M99 98 V106" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
 
-      <polygon points="60,17 97,38.5 97,81.5 60,103 23,81.5 23,38.5" stroke="#000000" stroke-width="3.2" fill="none"/>
-      <line x1="60" y1="17" x2="60" y2="103" stroke="#000000" stroke-width="3.2"/>
-      <line x1="23" y1="38.5" x2="97" y2="81.5" stroke="#000000" stroke-width="3.2"/>
-      <line x1="97" y1="38.5" x2="23" y2="81.5" stroke="#000000" stroke-width="3.2"/>
+      <polygon points="60,17 97,38.5 97,81.5 60,103 23,81.5 23,38.5" stroke="#FFFFFF" stroke-width="2.2" stroke-opacity="0.45" fill="none"/>
+      <line x1="60" y1="17" x2="60" y2="103" stroke="#FFFFFF" stroke-width="2.2" stroke-opacity="0.45"/>
+      <line x1="23" y1="38.5" x2="97" y2="81.5" stroke="#FFFFFF" stroke-width="2.2" stroke-opacity="0.45"/>
+      <line x1="97" y1="38.5" x2="23" y2="81.5" stroke="#FFFFFF" stroke-width="2.2" stroke-opacity="0.45"/>
 
-      <circle cx="60" cy="60" r="21" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-      <ellipse cx="60" cy="60" rx="10.5" ry="21" stroke="#000000" stroke-width="2.6" fill="none"/>
-      <line x1="60" y1="39" x2="60" y2="81" stroke="#000000" stroke-width="2.6"/>
-      <line x1="39" y1="60" x2="81" y2="60" stroke="#000000" stroke-width="2.6"/>
-      <path d="M43 49 Q60 53 77 49" stroke="#000000" stroke-width="2.2" fill="none"/>
-      <path d="M43 71 Q60 67 77 71" stroke="#000000" stroke-width="2.2" fill="none"/>
+      <circle cx="60" cy="60" r="21" fill="#000000" stroke="#FFFFFF" stroke-width="2.6"/>
+      <ellipse cx="60" cy="60" rx="10.5" ry="21" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+      <line x1="60" y1="39" x2="60" y2="81" stroke="#FFFFFF" stroke-width="2"/>
+      <line x1="39" y1="60" x2="81" y2="60" stroke="#FFFFFF" stroke-width="2"/>
+      <path d="M43 49 Q60 53 77 49" stroke="#FFFFFF" stroke-width="1.8" fill="none"/>
+      <path d="M43 71 Q60 67 77 71" stroke="#FFFFFF" stroke-width="1.8" fill="none"/>
 
       <g transform="translate(60,17)">
-        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-        <circle cy="-3" r="3.8" fill="#000000"/>
-        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+        <circle r="12" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
+        <circle cy="-3" r="3.4" fill="#FFFFFF"/>
+        <path d="M-7 8 C-7 3.2, 7 3.2, 7 8" fill="#FFFFFF"/>
       </g>
       <g transform="translate(97,38.5)">
-        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-        <circle cy="-3" r="3.8" fill="#000000"/>
-        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+        <circle r="12" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
+        <circle cy="-3" r="3.4" fill="#FFFFFF"/>
+        <path d="M-7 8 C-7 3.2, 7 3.2, 7 8" fill="#FFFFFF"/>
       </g>
       <g transform="translate(97,81.5)">
-        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-        <circle cy="-3" r="3.8" fill="#000000"/>
-        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+        <circle r="12" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
+        <circle cy="-3" r="3.4" fill="#FFFFFF"/>
+        <path d="M-7 8 C-7 3.2, 7 3.2, 7 8" fill="#FFFFFF"/>
       </g>
       <g transform="translate(60,103)">
-        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-        <circle cy="-3" r="3.8" fill="#000000"/>
-        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+        <circle r="12" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
+        <circle cy="-3" r="3.4" fill="#FFFFFF"/>
+        <path d="M-7 8 C-7 3.2, 7 3.2, 7 8" fill="#FFFFFF"/>
       </g>
       <g transform="translate(23,81.5)">
-        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-        <circle cy="-3" r="3.8" fill="#000000"/>
-        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+        <circle r="12" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
+        <circle cy="-3" r="3.4" fill="#FFFFFF"/>
+        <path d="M-7 8 C-7 3.2, 7 3.2, 7 8" fill="#FFFFFF"/>
       </g>
       <g transform="translate(23,38.5)">
-        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-        <circle cy="-3" r="3.8" fill="#000000"/>
-        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+        <circle r="12" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
+        <circle cy="-3" r="3.4" fill="#FFFFFF"/>
+        <path d="M-7 8 C-7 3.2, 7 3.2, 7 8" fill="#FFFFFF"/>
       </g>
     </svg>
 
     <!-- Ícono B&N 2 (Superior Derecha) -->
     <svg class="network-float net-2" viewBox="0 0 120 120" fill="none" aria-hidden="true">
-      <line x1="58" y1="58" x2="26" y2="26" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
-      <line x1="58" y1="58" x2="90" y2="90" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
-      <line x1="58" y1="58" x2="75" y2="28" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
-      <line x1="58" y1="58" x2="98" y2="57" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
-      <line x1="58" y1="58" x2="19" y2="68" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
-      <line x1="58" y1="58" x2="40" y2="88" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
+      <line x1="58" y1="58" x2="26" y2="26" stroke="#FFFFFF" stroke-width="2.4" stroke-opacity="0.5" stroke-linecap="round"/>
+      <line x1="58" y1="58" x2="90" y2="90" stroke="#FFFFFF" stroke-width="2.4" stroke-opacity="0.5" stroke-linecap="round"/>
+      <line x1="58" y1="58" x2="75" y2="28" stroke="#FFFFFF" stroke-width="2.4" stroke-opacity="0.5" stroke-linecap="round"/>
+      <line x1="58" y1="58" x2="98" y2="57" stroke="#FFFFFF" stroke-width="2.4" stroke-opacity="0.5" stroke-linecap="round"/>
+      <line x1="58" y1="58" x2="19" y2="68" stroke="#FFFFFF" stroke-width="2.4" stroke-opacity="0.5" stroke-linecap="round"/>
+      <line x1="58" y1="58" x2="40" y2="88" stroke="#FFFFFF" stroke-width="2.4" stroke-opacity="0.5" stroke-linecap="round"/>
 
-      <circle cx="75" cy="28" r="8" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-      <circle cx="98" cy="57" r="6" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-      <circle cx="19" cy="68" r="7" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-      <circle cx="40" cy="88" r="7.5" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+      <circle cx="75" cy="28" r="7.5" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
+      <circle cx="98" cy="57" r="5.5" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
+      <circle cx="19" cy="68" r="6.5" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
+      <circle cx="40" cy="88" r="7" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
 
       <g transform="translate(26,26)">
-        <circle r="14" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-        <circle cy="-3" r="4" stroke="#000000" stroke-width="2.8" fill="none"/>
-        <path d="M-8 8 C-4 3.5, 4 3.5, 8 8" stroke="#000000" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+        <circle r="13" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
+        <circle cy="-3" r="3.8" stroke="#FFFFFF" stroke-width="2.2" fill="none"/>
+        <path d="M-7.5 7.5 C-3.8 3.2, 3.8 3.2, 7.5 7.5" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" fill="none"/>
       </g>
 
       <g transform="translate(90,90)">
-        <circle r="14" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-        <circle cy="-3" r="4" stroke="#000000" stroke-width="2.8" fill="none"/>
-        <path d="M-8 8 C-4 3.5, 4 3.5, 8 8" stroke="#000000" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+        <circle r="13" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
+        <circle cy="-3" r="3.8" stroke="#FFFFFF" stroke-width="2.2" fill="none"/>
+        <path d="M-7.5 7.5 C-3.8 3.2, 3.8 3.2, 7.5 7.5" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" fill="none"/>
       </g>
 
       <g transform="translate(58,58)">
-        <circle r="19" fill="#FFFFFF" stroke="#000000" stroke-width="3.4"/>
-        <circle cy="-4.5" r="5.2" stroke="#000000" stroke-width="3" fill="none"/>
-        <path d="M-11 10.5 C-5.5 4.5, 5.5 4.5, 11 10.5" stroke="#000000" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <circle r="18" fill="#000000" stroke="#FFFFFF" stroke-width="2.6"/>
+        <circle cy="-4.5" r="4.8" stroke="#FFFFFF" stroke-width="2.4" fill="none"/>
+        <path d="M-10.5 10 C-5 4.2, 5 4.2, 10.5 10" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" fill="none"/>
       </g>
     </svg>
 
     <!-- Ícono B&N 3 (Inferior Izquierda) -->
     <svg class="network-float net-3" viewBox="0 0 120 120" fill="none" aria-hidden="true">
-      <line x1="62" y1="62" x2="94" y2="30" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
-      <line x1="62" y1="62" x2="30" y2="94" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
-      <line x1="62" y1="62" x2="45" y2="32" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
-      <line x1="62" y1="62" x2="22" y2="61" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
-      <line x1="62" y1="62" x2="101" y2="72" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
-      <line x1="62" y1="62" x2="80" y2="92" stroke="#000000" stroke-width="3.2" stroke-linecap="round"/>
+      <line x1="62" y1="62" x2="94" y2="30" stroke="#FFFFFF" stroke-width="2.4" stroke-opacity="0.5" stroke-linecap="round"/>
+      <line x1="62" y1="62" x2="30" y2="94" stroke="#FFFFFF" stroke-width="2.4" stroke-opacity="0.5" stroke-linecap="round"/>
+      <line x1="62" y1="62" x2="45" y2="32" stroke="#FFFFFF" stroke-width="2.4" stroke-opacity="0.5" stroke-linecap="round"/>
+      <line x1="62" y1="62" x2="22" y2="61" stroke="#FFFFFF" stroke-width="2.4" stroke-opacity="0.5" stroke-linecap="round"/>
+      <line x1="62" y1="62" x2="101" y2="72" stroke="#FFFFFF" stroke-width="2.4" stroke-opacity="0.5" stroke-linecap="round"/>
+      <line x1="62" y1="62" x2="80" y2="92" stroke="#FFFFFF" stroke-width="2.4" stroke-opacity="0.5" stroke-linecap="round"/>
 
-      <circle cx="45" cy="32" r="8" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-      <circle cx="22" cy="61" r="6" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-      <circle cx="101" cy="72" r="7" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-      <circle cx="80" cy="92" r="7.5" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
+      <circle cx="45" cy="32" r="7.5" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
+      <circle cx="22" cy="61" r="5.5" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
+      <circle cx="101" cy="72" r="6.5" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
+      <circle cx="80" cy="92" r="7" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
 
       <g transform="translate(94,30)">
-        <circle r="14" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-        <circle cy="-3" r="4" stroke="#000000" stroke-width="2.8" fill="none"/>
-        <path d="M-8 8 C-4 3.5, 4 3.5, 8 8" stroke="#000000" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+        <circle r="13" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
+        <circle cy="-3" r="3.8" stroke="#FFFFFF" stroke-width="2.2" fill="none"/>
+        <path d="M-7.5 7.5 C-3.8 3.2, 3.8 3.2, 7.5 7.5" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" fill="none"/>
       </g>
 
       <g transform="translate(30,94)">
-        <circle r="14" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-        <circle cy="-3" r="4" stroke="#000000" stroke-width="2.8" fill="none"/>
-        <path d="M-8 8 C-4 3.5, 4 3.5, 8 8" stroke="#000000" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+        <circle r="13" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
+        <circle cy="-3" r="3.8" stroke="#FFFFFF" stroke-width="2.2" fill="none"/>
+        <path d="M-7.5 7.5 C-3.8 3.2, 3.8 3.2, 7.5 7.5" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" fill="none"/>
       </g>
 
       <g transform="translate(62,62)">
-        <circle r="19" fill="#FFFFFF" stroke="#000000" stroke-width="3.4"/>
-        <circle cy="-4.5" r="5.2" stroke="#000000" stroke-width="3" fill="none"/>
-        <path d="M-11 10.5 C-5.5 4.5, 5.5 4.5, 11 10.5" stroke="#000000" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <circle r="18" fill="#000000" stroke="#FFFFFF" stroke-width="2.6"/>
+        <circle cy="-4.5" r="4.8" stroke="#FFFFFF" stroke-width="2.4" fill="none"/>
+        <path d="M-10.5 10 C-5 4.2, 5 4.2, 10.5 10" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" fill="none"/>
       </g>
     </svg>
 
     <!-- Ícono B&N 4 (Inferior Derecha) -->
     <svg class="network-float net-4" viewBox="0 0 120 120" fill="none" aria-hidden="true">
-      <polygon points="60,17 97,38.5 97,81.5 60,103 23,81.5 23,38.5" stroke="#000000" stroke-width="3.2" fill="none"/>
-      <line x1="60" y1="17" x2="60" y2="103" stroke="#000000" stroke-width="3.2"/>
-      <line x1="23" y1="38.5" x2="97" y2="81.5" stroke="#000000" stroke-width="3.2"/>
-      <line x1="97" y1="38.5" x2="23" y2="81.5" stroke="#000000" stroke-width="3.2"/>
+      <polygon points="60,17 97,38.5 97,81.5 60,103 23,81.5 23,38.5" stroke="#FFFFFF" stroke-width="2.2" stroke-opacity="0.45" fill="none"/>
+      <line x1="60" y1="17" x2="60" y2="103" stroke="#FFFFFF" stroke-width="2.2" stroke-opacity="0.45"/>
+      <line x1="23" y1="38.5" x2="97" y2="81.5" stroke="#FFFFFF" stroke-width="2.2" stroke-opacity="0.45"/>
+      <line x1="97" y1="38.5" x2="23" y2="81.5" stroke="#FFFFFF" stroke-width="2.2" stroke-opacity="0.45"/>
 
-      <circle cx="60" cy="60" r="21" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-      <ellipse cx="60" cy="60" rx="10.5" ry="21" stroke="#000000" stroke-width="2.6" fill="none"/>
-      <line x1="60" y1="39" x2="60" y2="81" stroke="#000000" stroke-width="2.6"/>
-      <line x1="39" y1="60" x2="81" y2="60" stroke="#000000" stroke-width="2.6"/>
-      <path d="M43 49 Q60 53 77 49" stroke="#000000" stroke-width="2.2" fill="none"/>
-      <path d="M43 71 Q60 67 77 71" stroke="#000000" stroke-width="2.2" fill="none"/>
+      <circle cx="60" cy="60" r="21" fill="#000000" stroke="#FFFFFF" stroke-width="2.6"/>
+      <ellipse cx="60" cy="60" rx="10.5" ry="21" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+      <line x1="60" y1="39" x2="60" y2="81" stroke="#FFFFFF" stroke-width="2"/>
+      <line x1="39" y1="60" x2="81" y2="60" stroke="#FFFFFF" stroke-width="2"/>
+      <path d="M43 49 Q60 53 77 49" stroke="#FFFFFF" stroke-width="1.8" fill="none"/>
+      <path d="M43 71 Q60 67 77 71" stroke="#FFFFFF" stroke-width="1.8" fill="none"/>
 
       <g transform="translate(60,17)">
-        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-        <circle cy="-3" r="3.8" fill="#000000"/>
-        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+        <circle r="12" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
+        <circle cy="-3" r="3.4" fill="#FFFFFF"/>
+        <path d="M-7 8 C-7 3.2, 7 3.2, 7 8" fill="#FFFFFF"/>
       </g>
       <g transform="translate(97,38.5)">
-        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-        <circle cy="-3" r="3.8" fill="#000000"/>
-        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+        <circle r="12" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
+        <circle cy="-3" r="3.4" fill="#FFFFFF"/>
+        <path d="M-7 8 C-7 3.2, 7 3.2, 7 8" fill="#FFFFFF"/>
       </g>
       <g transform="translate(97,81.5)">
-        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-        <circle cy="-3" r="3.8" fill="#000000"/>
-        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+        <circle r="12" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
+        <circle cy="-3" r="3.4" fill="#FFFFFF"/>
+        <path d="M-7 8 C-7 3.2, 7 3.2, 7 8" fill="#FFFFFF"/>
       </g>
       <g transform="translate(60,103)">
-        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-        <circle cy="-3" r="3.8" fill="#000000"/>
-        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+        <circle r="12" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
+        <circle cy="-3" r="3.4" fill="#FFFFFF"/>
+        <path d="M-7 8 C-7 3.2, 7 3.2, 7 8" fill="#FFFFFF"/>
       </g>
       <g transform="translate(23,81.5)">
-        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-        <circle cy="-3" r="3.8" fill="#000000"/>
-        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+        <circle r="12" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
+        <circle cy="-3" r="3.4" fill="#FFFFFF"/>
+        <path d="M-7 8 C-7 3.2, 7 3.2, 7 8" fill="#FFFFFF"/>
       </g>
       <g transform="translate(23,38.5)">
-        <circle r="13" fill="#FFFFFF" stroke="#000000" stroke-width="3.2"/>
-        <circle cy="-3" r="3.8" fill="#000000"/>
-        <path d="M-7.5 8.5 C-7.5 3.5, 7.5 3.5, 7.5 8.5" fill="#000000"/>
+        <circle r="12" fill="#000000" stroke="#FFFFFF" stroke-width="2.4"/>
+        <circle cy="-3" r="3.4" fill="#FFFFFF"/>
+        <path d="M-7 8 C-7 3.2, 7 3.2, 7 8" fill="#FFFFFF"/>
       </g>
     </svg>
 
@@ -2212,7 +2246,7 @@
 
     <div class="hero-lockup">
       <div class="lockup-emblem" aria-hidden="true">
-        <svg width="98" height="98" viewBox="0 0 100 100">
+        <svg width="132" height="132" viewBox="0 0 100 100">
           <use href="#esan-pine-emblem"/>
         </svg>
       </div>
@@ -2669,8 +2703,8 @@
             <div class="form-group">
               <label for="inputEmail"><span>CORREO ELECTRÓNICO <span class="req">*</span></span></label>
               <input type="email" id="inputEmail" class="form-control" placeholder="tu.usuario@esan.edu.pe" required autocomplete="email">
-              <span class="field-hint esan-badge" id="hintEmail">De preferencia usa tu correo institucional @esan.edu.pe</span>
-              <span class="field-error" id="errEmail">Ingresa un correo electrónico válido y existente.</span>
+              <span class="field-hint esan-badge" id="hintEmail">Obligatorio usar tu correo institucional @esan.edu.pe</span>
+              <span class="field-error" id="errEmail">Ingresa un correo electrónico institucional @esan.edu.pe válido.</span>
             </div>
 
             <div class="form-group">
@@ -2846,9 +2880,36 @@
     <p style="margin-top: 6px;">Campus ESAN &bull; Jirón Alonso de Molina 1652, Santiago de Surco, Lima</p>
   </footer>
 
+  <!-- AVISO INSTITUCIONAL ESAN -->
+  <div id="esanAvisoBackdrop" style="display:none; position:fixed; inset:0; background:rgba(8,10,16,0.75); backdrop-filter:blur(5px); z-index:9999; align-items:center; justify-content:center; padding:20px;">
+    <div style="background:#FFFFFF; border-top:5px solid #E30613; border-radius:18px; max-width:420px; width:100%; padding:30px 26px; text-align:center; box-shadow:0 24px 60px rgba(0,0,0,0.35); font-family:'Plus Jakarta Sans',sans-serif;">
+      <div style="width:54px; height:54px; border-radius:50%; background:rgba(227,6,19,0.1); color:#E30613; display:flex; align-items:center; justify-content:center; margin:0 auto 16px; font-family:'Montserrat',sans-serif; font-weight:900; font-size:24px;">!</div>
+      <h3 id="esanAvisoTitulo" style="font-family:'Montserrat',sans-serif; font-size:19px; font-weight:800; color:#2B2B2B; margin:0 0 10px;">Registro ya existente</h3>
+      <p id="esanAvisoTexto" style="font-size:14.5px; color:#5F6368; line-height:1.55; margin:0 0 22px;">Ya registraste tu asistencia anteriormente. No es necesario volver a registrarte.</p>
+      <button type="button" onclick="cerrarAvisoESAN()" style="background:#E30613; color:#FFFFFF; border:none; border-radius:999px; padding:12px 32px; font-family:'Montserrat',sans-serif; font-size:12.5px; font-weight:800; letter-spacing:0.08em; cursor:pointer; text-transform:uppercase;">Entendido</button>
+    </div>
+  </div>
+
   <script>
-    // ================= URL CONECTADA A GOOGLE SHEETS ("Networking") + ENVÍO DE TARJETA =================
+    // ================= URL CONECTADA A GOOGLE SHEETS + ENVÍO DE TARJETA DESDE mespecializadas@esan.edu.pe =================
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby6qFlkxU_leA9ryZS8KJxU9K-6JDweuRTj3zp4RZ4rwf7p89tsvTv4RfBdHS7oAmCLFw/exec';
+
+    let esanAvisoCallback = null;
+    function mostrarAvisoESAN(titulo, mensaje, alCerrar) {
+      const cm = document.getElementById('confirmModal');
+      if (cm) cm.classList.remove('open');
+      document.getElementById('esanAvisoTitulo').textContent = titulo;
+      document.getElementById('esanAvisoTexto').textContent = mensaje;
+      esanAvisoCallback = alCerrar || null;
+      document.getElementById('esanAvisoBackdrop').style.display = 'flex';
+    }
+    function cerrarAvisoESAN() {
+      document.getElementById('esanAvisoBackdrop').style.display = 'none';
+      if (typeof esanAvisoCallback === 'function') {
+        esanAvisoCallback();
+        esanAvisoCallback = null;
+      }
+    }
 
     // ================= 0. MENÚ RESPONSIVE PARA TABLETS Y CELULARES =================
     const navMenuToggle = document.getElementById('navMenuToggle');
@@ -3200,7 +3261,7 @@
         hintEmail.textContent = 'Correo institucional ESAN (@esan.edu.pe) verificado.';
         hintEmail.className = 'field-hint esan-verified';
       } else {
-        hintEmail.textContent = 'De preferencia usa tu correo institucional @esan.edu.pe';
+        hintEmail.textContent = 'Obligatorio usar tu correo institucional @esan.edu.pe';
         hintEmail.className = 'field-hint esan-badge';
       }
       showFieldError(inputEmail, 'errEmail', false);
@@ -3209,14 +3270,14 @@
     inputEmail.addEventListener('blur', async () => {
       const val = inputEmail.value.trim();
       if (!val) return;
-      const syntaxOk = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(val);
+      const syntaxOk = /^[A-Za-z0-9._%+-]+@esan\.edu\.pe$/i.test(val);
       if (!syntaxOk) {
-        showFieldError(inputEmail, 'errEmail', true, 'Formato de correo inválido. Ej: usuario@esan.edu.pe');
+        showFieldError(inputEmail, 'errEmail', true, 'Solo se permite correo institucional @esan.edu.pe. Ej: usuario@esan.edu.pe');
         return;
       }
       const domainOk = await checkEmailDomainExists(val);
       if (!domainOk) {
-        showFieldError(inputEmail, 'errEmail', true, 'El dominio de este correo no existe. Verifica o usa tu @esan.edu.pe.');
+        showFieldError(inputEmail, 'errEmail', true, 'El dominio de este correo no existe. Usa tu @esan.edu.pe.');
       } else {
         showFieldError(inputEmail, 'errEmail', false);
         inputEmail.classList.add('is-valid');
@@ -3349,14 +3410,10 @@
       canvas.height = 1540;
       const ctx = canvas.getContext('2d');
 
-      const bgGrad = ctx.createLinearGradient(0, 0, 1080, 1540);
-      bgGrad.addColorStop(0, '#0B0E17');
-      bgGrad.addColorStop(0.55, '#161C2E');
-      bgGrad.addColorStop(1, '#1D0F16');
-      ctx.fillStyle = bgGrad;
+      ctx.fillStyle = '#000000';
       ctx.fillRect(0, 0, 1080, 1540);
 
-      ctx.fillStyle = '#080A10';
+      ctx.fillStyle = '#181B24';
       ctx.fillRect(0, 0, 1080, 195);
 
       ctx.fillStyle = '#E30613';
@@ -3481,7 +3538,7 @@
       return canvas;
     }
 
-    // ================= 6. ENVÍO A GOOGLE SHEETS ("Networking" / "Hoja 1") + CORREO CON TARJETA =================
+    // ================= 6. ENVÍO A GOOGLE SHEETS + CORREO AL ALUMNO =================
     const form = document.getElementById('networkingForm');
     const btnSubmitForm = document.getElementById('btnSubmitForm');
     const confirmModal = document.getElementById('confirmModal');
@@ -3503,17 +3560,10 @@
         valid = false;
       }
 
-      const emailVal = inputEmail.value.trim();
-      const syntaxOk = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(emailVal);
-      if (!syntaxOk) {
-        showFieldError(inputEmail, 'errEmail', true, 'Ingresa un correo electrónico válido (de preferencia @esan.edu.pe).');
+      const emailVal = inputEmail.value.trim().toLowerCase();
+      if (!emailVal || !/^[A-Za-z0-9._%+-]+@esan\.edu\.pe$/i.test(emailVal)) {
+        showFieldError(inputEmail, 'errEmail', true, 'Solo se permite el registro con tu correo institucional @esan.edu.pe.');
         valid = false;
-      } else {
-        const domainExists = await checkEmailDomainExists(emailVal);
-        if (!domainExists) {
-          showFieldError(inputEmail, 'errEmail', true, 'El dominio de correo ingresado no existe. Verifica tu dirección.');
-          valid = false;
-        }
       }
 
       if (!isValidLinkedinProfile(inputLinkedin.value)) {
@@ -3557,6 +3607,15 @@
         return;
       }
 
+      if (!emailVal.endsWith('@esan.edu.pe')) {
+        mostrarAvisoESAN(
+          'Correo institucional requerido',
+          'Solo se permite el registro con tu correo institucional @esan.edu.pe.',
+          () => inputEmail.focus()
+        );
+        return;
+      }
+
       btnSubmitForm.disabled = true;
       btnSubmitForm.textContent = 'GUARDANDO EN EXCEL Y ENVIANDO CORREO...';
 
@@ -3567,8 +3626,13 @@
       modalBadgeName.textContent = nameVal.toUpperCase();
 
       latestBadgeCanvas = await buildOfficialBadgeCanvas();
-      const dataUrl = latestBadgeCanvas.toDataURL('image/png');
-      const base64Png = dataUrl.split(',')[1];
+      let base64Png = '';
+      try {
+        const dataUrl = latestBadgeCanvas.toDataURL('image/png');
+        base64Png = dataUrl.split(',')[1] || '';
+      } catch (canvasErr) {
+        base64Png = '';
+      }
       const safeFileName = `ficha-esan-${nameVal.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`;
 
       emailStatusBanner.classList.remove('warning');
@@ -3591,15 +3655,6 @@
           fileName: safeFileName,
           badgePngBase64: base64Png
         };
-        const correoIngresado = inputEmail.value.trim().toLowerCase();
-        if (!correoIngresado.endsWith('@esan.edu.pe')) {
-          mostrarAvisoESAN(
-                  'Correo institucional requerido',
-                  'Solo se permite el registro con tu correo institucional @esan.edu.pe.',
-            () => inputEmail.focus()
-          );
-          return;
-        }
 
         const response = await fetch(GOOGLE_SCRIPT_URL, {
           method: 'POST',
@@ -3610,10 +3665,10 @@
         });
 
         const result = await response.json();
-          if (result.status === 'duplicate' || result.status === 'invalid_domain') {
-            mostrarAvisoESAN(result.status === 'duplicate' ? 'Ya estás registrado' : 'Correo no permitido', result.message);
-            return;
-          }
+        if (result.status === 'duplicate' || result.status === 'invalid_domain') {
+          mostrarAvisoESAN(result.status === 'duplicate' ? 'Ya estás registrado' : 'Correo no permitido', result.message);
+          return;
+        }
 
         if (result && result.status === 'success') {
           emailStatusBanner.innerHTML = `
@@ -3626,7 +3681,7 @@
       } catch (err) {
         emailStatusBanner.classList.add('warning');
         emailStatusBanner.innerHTML = `
-          <strong>Registro procesado:</strong> Verifica tu bandeja de entrada en <strong>${escapeHtml(emailVal)}</strong> .También puedes descargar tu tarjeta PNG directamente aquí abajo.
+          <strong>Aviso del servidor:</strong> ${escapeHtml(err.message || 'Verifica tu bandeja de entrada')} en <strong>${escapeHtml(emailVal)}</strong>. También puedes descargar tu tarjeta PNG directamente aquí abajo.
         `;
       } finally {
         btnSubmitForm.disabled = false;
@@ -3688,33 +3743,5 @@
     // Inicializar vista previa y QR desde API
     updatePreview();
   </script>
-  <!-- AVISO INSTITUCIONAL ESAN -->
-<div id="esanAvisoBackdrop" style="display:none; position:fixed; inset:0; background:rgba(8,10,16,0.75); backdrop-filter:blur(5px); z-index:9999; align-items:center; justify-content:center; padding:20px;">
-  <div style="background:#FFFFFF; border-top:5px solid #E30613; border-radius:18px; max-width:420px; width:100%; padding:30px 26px; text-align:center; box-shadow:0 24px 60px rgba(0,0,0,0.35); font-family:'Plus Jakarta Sans',sans-serif;">
-    <div style="width:54px; height:54px; border-radius:50%; background:rgba(227,6,19,0.1); color:#E30613; display:flex; align-items:center; justify-content:center; margin:0 auto 16px; font-family:'Montserrat',sans-serif; font-weight:900; font-size:24px;">!</div>
-    <h3 id="esanAvisoTitulo" style="font-family:'Montserrat',sans-serif; font-size:19px; font-weight:800; color:#2B2B2B; margin:0 0 10px;">Registro ya existente</h3>
-    <p id="esanAvisoTexto" style="font-size:14.5px; color:#5F6368; line-height:1.55; margin:0 0 22px;">Ya registraste tu asistencia anteriormente. No es necesario volver a registrarte.</p>
-    <button type="button" onclick="cerrarAvisoESAN()" style="background:#E30613; color:#FFFFFF; border:none; border-radius:999px; padding:12px 32px; font-family:'Montserrat',sans-serif; font-size:12.5px; font-weight:800; letter-spacing:0.08em; cursor:pointer; text-transform:uppercase;">Entendido</button>
-  </div>
-</div>
-
-<script>
-  let esanAvisoCallback = null;
-  function mostrarAvisoESAN(titulo, mensaje, alCerrar) {
-    const cm = document.getElementById('confirmModal');
-    if (cm) cm.classList.remove('open');
-    document.getElementById('esanAvisoTitulo').textContent = titulo;
-    document.getElementById('esanAvisoTexto').textContent = mensaje;
-    esanAvisoCallback = alCerrar || null;
-    document.getElementById('esanAvisoBackdrop').style.display = 'flex';
-  }
-  function cerrarAvisoESAN() {
-    document.getElementById('esanAvisoBackdrop').style.display = 'none';
-    if (typeof esanAvisoCallback === 'function') {
-      esanAvisoCallback();
-      esanAvisoCallback = null;
-    }
-  }
-</script>
 </body>
 </html>
