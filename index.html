@@ -255,7 +255,6 @@
       flex-shrink: 0;
     }
 
-    /* LOGO OFICIAL DESDE CARPETA img/ */
     .hero-logo-wrapper {
       display: flex;
       align-items: center;
@@ -1886,7 +1885,7 @@
     </defs>
   </svg>
 
-  <!-- ================= NAVBAR (DIFERENCIADA DEL FONDO NEGRO + LOGO DE CARPETA img/) ================= -->
+  <!-- ================= NAVBAR ================= -->
   <nav class="navbar">
     <a href="#" class="nav-brand">
       <img src="img/logo%20rn%20negro_2.png"
@@ -1925,7 +1924,7 @@
     <a href="#registro" style="color:#E30613;">Registrarme y Generar QR &rarr;</a>
   </div>
 
-  <!-- ================= HERO COVER (FONDO NEGRO #000000 + LOGO OFICIAL DE img/) ================= -->
+  <!-- ================= HERO COVER ================= -->
   <header class="hero">
     <div class="hero-grid-floor"></div>
 
@@ -2097,7 +2096,6 @@
       MAESTRÍAS ESPECIALIZADAS Y MBA ESAN &bull; EL LEGADO DE STANFORD
     </div>
 
-    <!-- IMAGEN OFICIAL DE TU CARPETA img/ (CON EL PINO ORIGINAL) -->
     <div class="hero-logo-wrapper">
       <img src="img/logo%20rn%20negro_2.png"
            onerror="this.onerror=null;this.src='img/logo%20rn%20negro.png';"
@@ -2490,11 +2488,11 @@
   <!-- ================= SECCIÓN 5: REGISTRO & FICHA MATCHING WALL QR ================= -->
   <div class="section-band-white">
     <section id="registro" class="content-section">
-      <div class="section-pill-eyebrow">CONFIRMA TU ASISTENCIA</div>
+      <div class="section-pill-eyebrow">EXCLUSIVO COMUNIDAD DE POSGRADO ESAN</div>
       <h2 class="section-title">Registro &amp; Ficha <span class="red">Matching Wall QR</span></h2>
       <div class="section-red-bar"></div>
       <p class="section-subtitle">
-        Completa tus datos profesionales para registrar tu asistencia en nuestra base de datos y recibir por correo tu ficha personalizada con código QR para el Muro de Contactos.
+        Completa tus datos tal como figuran en tu registro de graduado ESAN. Puedes ingresar <strong>cualquier correo activo</strong> (personal, corporativo o @esan.edu.pe) para recibir tu ficha personalizada con código QR.
       </p>
 
       <div class="registration-wrapper">
@@ -2503,8 +2501,8 @@
           <div class="form-grid-2">
             <div class="form-group">
               <label for="inputName"><span>NOMBRES Y APELLIDOS <span class="req">*</span></span></label>
-              <input type="text" id="inputName" class="form-control" placeholder="Ej. Carlos Mendoza" required maxlength="45" autocomplete="name">
-              <span class="field-hint">Solo se permiten letras y espacios.</span>
+              <input type="text" id="inputName" class="form-control" placeholder="Ej. Christian Edgar Angeles Mendiola" required maxlength="55" autocomplete="name">
+              <span class="field-hint">Ingresa tus nombres y apellidos para validarte en el padrón ESAN.</span>
               <span class="field-error" id="errName">Ingresa un nombre válido (solo letras y espacios).</span>
             </div>
 
@@ -2539,10 +2537,10 @@
 
           <div class="form-grid-2">
             <div class="form-group">
-              <label for="inputEmail"><span>CORREO ELECTRÓNICO <span class="req">*</span></span></label>
-              <input type="email" id="inputEmail" class="form-control" placeholder="tu.usuario@esan.edu.pe" required autocomplete="email">
-              <span class="field-hint esan-badge" id="hintEmail">Obligatorio usar tu correo institucional @esan.edu.pe</span>
-              <span class="field-error" id="errEmail">Ingresa un correo electrónico institucional @esan.edu.pe válido.</span>
+              <label for="inputEmail"><span>CORREO ELECTRÓNICO ACTIVO <span class="req">*</span></span></label>
+              <input type="email" id="inputEmail" class="form-control" placeholder="tu.correo@gmail.com o @esan.edu.pe" required autocomplete="email">
+              <span class="field-hint esan-badge" id="hintEmail">Puedes usar tu correo personal, corporativo o @esan.edu.pe.</span>
+              <span class="field-error" id="errEmail">Ingresa un correo electrónico válido para recibir tu ficha QR.</span>
             </div>
 
             <div class="form-group">
@@ -2720,16 +2718,16 @@
 
   <!-- AVISO INSTITUCIONAL ESAN -->
   <div id="esanAvisoBackdrop" style="display:none; position:fixed; inset:0; background:rgba(8,10,16,0.75); backdrop-filter:blur(5px); z-index:9999; align-items:center; justify-content:center; padding:20px;">
-    <div style="background:#FFFFFF; border-top:5px solid #E30613; border-radius:18px; max-width:420px; width:100%; padding:30px 26px; text-align:center; box-shadow:0 24px 60px rgba(0,0,0,0.35); font-family:'Plus Jakarta Sans',sans-serif;">
+    <div style="background:#FFFFFF; border-top:5px solid #E30613; border-radius:18px; max-width:440px; width:100%; padding:30px 26px; text-align:center; box-shadow:0 24px 60px rgba(0,0,0,0.35); font-family:'Plus Jakarta Sans',sans-serif;">
       <div style="width:54px; height:54px; border-radius:50%; background:rgba(227,6,19,0.1); color:#E30613; display:flex; align-items:center; justify-content:center; margin:0 auto 16px; font-family:'Montserrat',sans-serif; font-weight:900; font-size:24px;">!</div>
-      <h3 id="esanAvisoTitulo" style="font-family:'Montserrat',sans-serif; font-size:19px; font-weight:800; color:#2B2B2B; margin:0 0 10px;">Registro ya existente</h3>
-      <p id="esanAvisoTexto" style="font-size:14.5px; color:#5F6368; line-height:1.55; margin:0 0 22px;">Ya registraste tu asistencia anteriormente. No es necesario volver a registrarte.</p>
+      <h3 id="esanAvisoTitulo" style="font-family:'Montserrat',sans-serif; font-size:19px; font-weight:800; color:#2B2B2B; margin:0 0 10px;">Aviso ESAN</h3>
+      <p id="esanAvisoTexto" style="font-size:14.5px; color:#5F6368; line-height:1.55; margin:0 0 22px;"></p>
       <button type="button" onclick="cerrarAvisoESAN()" style="background:#E30613; color:#FFFFFF; border:none; border-radius:999px; padding:12px 32px; font-family:'Montserrat',sans-serif; font-size:12.5px; font-weight:800; letter-spacing:0.08em; cursor:pointer; text-transform:uppercase;">Entendido</button>
     </div>
   </div>
 
   <script>
-    // ================= URL CONECTADA A GOOGLE SHEETS + ENVÍO DE TARJETA DESDE mespecializadas@esan.edu.pe =================
+    // ================= URL CONECTADA A GOOGLE SHEETS + ENVÍO DESDE mespecializadas@esan.edu.pe =================
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby6qFlkxU_leA9ryZS8KJxU9K-6JDweuRTj3zp4RZ4rwf7p89tsvTv4RfBdHS7oAmCLFw/exec';
 
     let esanAvisoCallback = null;
@@ -2749,7 +2747,7 @@
       }
     }
 
-    // ================= 0. MENÚ RESPONSIVE PARA TABLETS Y CELULARES =================
+    // ================= 0. MENÚ RESPONSIVE PARA TABLETS Y CELULAaRES =================
     const navMenuToggle = document.getElementById('navMenuToggle');
     const mobileDrawer = document.getElementById('mobileDrawer');
 
@@ -2982,7 +2980,7 @@
       }, 220);
     }
 
-    // ================= 4. VALIDACIONES ESTRICTAS DEL FORMULARIO =================
+    // ================= 4. VALIDACIONES DEL FORMULARIO (CUALQUIER CORREO ACTIVO) =================
     const state = {
       isEntrepreneur: true
     };
@@ -3079,7 +3077,7 @@
       const parts = email.trim().toLowerCase().split('@');
       if (parts.length !== 2 || !parts[1]) return false;
       const domain = parts[1];
-      if (domain === 'esan.edu.pe') return true;
+      if (domain === 'esan.edu.pe' || domain === 'gmail.com' || domain === 'hotmail.com' || domain === 'outlook.com') return true;
       if (domainCache.has(domain)) return domainCache.get(domain);
 
       try {
@@ -3096,10 +3094,10 @@
     inputEmail.addEventListener('input', () => {
       const val = inputEmail.value.trim().toLowerCase();
       if (val.endsWith('@esan.edu.pe')) {
-        hintEmail.textContent = 'Correo institucional ESAN (@esan.edu.pe) verificado.';
+        hintEmail.textContent = 'Correo institucional ESAN (@esan.edu.pe) detectado.';
         hintEmail.className = 'field-hint esan-verified';
       } else {
-        hintEmail.textContent = 'Obligatorio usar tu correo institucional @esan.edu.pe';
+        hintEmail.textContent = 'Puedes usar tu correo personal, corporativo o @esan.edu.pe.';
         hintEmail.className = 'field-hint esan-badge';
       }
       showFieldError(inputEmail, 'errEmail', false);
@@ -3108,14 +3106,14 @@
     inputEmail.addEventListener('blur', async () => {
       const val = inputEmail.value.trim();
       if (!val) return;
-      const syntaxOk = /^[A-Za-z0-9._%+-]+@esan\.edu\.pe$/i.test(val);
+      const syntaxOk = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i.test(val);
       if (!syntaxOk) {
-        showFieldError(inputEmail, 'errEmail', true, 'Solo se permite correo institucional @esan.edu.pe. Ej: usuario@esan.edu.pe');
+        showFieldError(inputEmail, 'errEmail', true, 'Ingresa un correo electrónico válido (ej. tu.nombre@gmail.com).');
         return;
       }
       const domainOk = await checkEmailDomainExists(val);
       if (!domainOk) {
-        showFieldError(inputEmail, 'errEmail', true, 'El dominio de este correo no existe. Usa tu @esan.edu.pe.');
+        showFieldError(inputEmail, 'errEmail', true, 'El dominio de este correo no parece existir. Verifica tu dirección.');
       } else {
         showFieldError(inputEmail, 'errEmail', false);
         inputEmail.classList.add('is-valid');
@@ -3230,7 +3228,7 @@
       updatePreview();
     });
 
-    // ================= 5. GENERADOR DE FICHA PNG OFICIAL (USA TU LOGO REAL DE img/) =================
+    // ================= 5. GENERADOR DE FICHA PNG OFICIAL =================
     async function loadQrImageForCanvas(linkedinUrl) {
       const qrApiUrl = getValidQrApiUrl(linkedinUrl);
       return new Promise((resolve) => {
@@ -3388,7 +3386,7 @@
       return canvas;
     }
 
-    // ================= 6. ENVÍO A GOOGLE SHEETS + CORREO AL ALUMNO =================
+    // ================= 6. ENVÍO A GOOGLE SHEETS + VALIDACIÓN PADRÓN + CORREO =================
     const form = document.getElementById('networkingForm');
     const btnSubmitForm = document.getElementById('btnSubmitForm');
     const confirmModal = document.getElementById('confirmModal');
@@ -3411,8 +3409,8 @@
       }
 
       const emailVal = inputEmail.value.trim().toLowerCase();
-      if (!emailVal || !/^[A-Za-z0-9._%+-]+@esan\.edu\.pe$/i.test(emailVal)) {
-        showFieldError(inputEmail, 'errEmail', true, 'Solo se permite el registro con tu correo institucional @esan.edu.pe.');
+      if (!emailVal || !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i.test(emailVal)) {
+        showFieldError(inputEmail, 'errEmail', true, 'Ingresa un correo electrónico válido para recibir tu ficha QR.');
         valid = false;
       }
 
@@ -3457,17 +3455,8 @@
         return;
       }
 
-      if (!emailVal.endsWith('@esan.edu.pe')) {
-        mostrarAvisoESAN(
-          'Correo institucional requerido',
-          'Solo se permite el registro con tu correo institucional @esan.edu.pe.',
-          () => inputEmail.focus()
-        );
-        return;
-      }
-
       btnSubmitForm.disabled = true;
-      btnSubmitForm.textContent = 'GUARDANDO EN EXCEL Y ENVIANDO CORREO...';
+      btnSubmitForm.textContent = 'VALIDANDO PADRÓN ESAN Y ENVIANDO...';
 
       updatePreview();
       const linkedinFullUrl = normalizeLinkedinUrl(inputLinkedin.value);
@@ -3484,10 +3473,6 @@
         base64Png = '';
       }
       const safeFileName = `ficha-esan-${nameVal.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`;
-
-      emailStatusBanner.classList.remove('warning');
-      emailStatusBanner.innerHTML = `Guardando tu asistencia en Google Sheets y enviando tu tarjeta PNG a <strong>${escapeHtml(emailVal)}</strong>...`;
-      confirmModal.classList.add('open');
 
       try {
         const payload = {
@@ -3515,16 +3500,24 @@
         });
 
         const result = await response.json();
-        if (result.status === 'duplicate' || result.status === 'invalid_domain') {
-          mostrarAvisoESAN(result.status === 'duplicate' ? 'Ya estás registrado' : 'Correo no permitido', result.message);
+
+        if (result.status === 'duplicate') {
+          mostrarAvisoESAN('Ya estás registrado', result.message);
+          return;
+        }
+
+        if (result.status === 'pending_validation') {
+          mostrarAvisoESAN('Validación de Padrón ESAN', result.message);
           return;
         }
 
         if (result && result.status === 'success') {
+          emailStatusBanner.classList.remove('warning');
           emailStatusBanner.innerHTML = `
-            <strong>¡Listo! Asistencia registrada en Google Sheets.</strong><br>
-            Hemos guardado tus datos en el registro oficial y enviado un correo de confirmación con tu tarjeta PNG adjunta a <strong>${escapeHtml(emailVal)}</strong>.
+            <strong>¡Listo! Graduado ESAN verificado.</strong><br>
+            Hemos registrado tu asistencia y enviado tu ficha oficial QR desde <strong>mespecializadas@esan.edu.pe</strong> a <strong>${escapeHtml(emailVal)}</strong>.
           `;
+          confirmModal.classList.add('open');
         } else {
           throw new Error((result && result.message) || 'Error en Google Apps Script');
         }
@@ -3533,6 +3526,7 @@
         emailStatusBanner.innerHTML = `
           <strong>Aviso del servidor:</strong> ${escapeHtml(err.message || 'Verifica tu bandeja de entrada')} en <strong>${escapeHtml(emailVal)}</strong>. También puedes descargar tu tarjeta PNG directamente aquí abajo.
         `;
+        confirmModal.classList.add('open');
       } finally {
         btnSubmitForm.disabled = false;
         btnSubmitForm.innerHTML = `
