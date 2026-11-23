@@ -2684,7 +2684,7 @@
              onerror="this.onerror=null;this.src='img/logo%20rn%20negro.png';"
              alt="">
       </div>
-      <h3 style="font-size: 21px; font-weight: 900; margin-bottom: 6px; color: #2B2B2B;">¡Asistencia Confirmada!</h3>
+      <h3 style="font-size: 21px; font-weight: 900; margin-bottom: 6px; color: #2B2B2B;">¡Solicitud Registrada!</h3>
       <p style="color: #5F6368; font-size: 13.5px; margin-bottom: 14px;">
         Tu ficha oficial para el <strong style="color:#2B2B2B;">Matching Wall QR</strong> está lista.
       </p>
@@ -3518,8 +3518,8 @@
         if (result && result.status === 'success') {
           emailStatusBanner.classList.remove('warning');
           emailStatusBanner.innerHTML = `
-            <strong>¡Listo! Graduado ESAN verificado.</strong><br>
-            Hemos registrado tu asistencia y enviado tu ficha oficial QR desde <strong>mespecializadas@esan.edu.pe</strong> a <strong>${escapeHtml(emailVal)}</strong>.
+            <strong>¡Solicitud recibida correctamente!</strong><br>
+            Tu registro quedó en revisión. Una vez aprobado por el equipo ESAN, recibirás tu confirmación oficial y ficha QR desde <strong>mespecializadas@esan.edu.pe</strong> en <strong>${escapeHtml(emailVal)}</strong>.
           `;
           confirmModal.classList.add('open');
         } else {
