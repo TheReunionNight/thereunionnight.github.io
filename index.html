@@ -3519,8 +3519,8 @@
           emailStatusBanner.classList.remove('warning');
           emailStatusBanner.innerHTML = `
             <strong>¡Registro recibido! En breve se confirmará o no tu asistencia.</strong><br>
-            Estamos validando tus datos en el padrón oficial de graduados ESAN. Te notificaremos por correo desde <strong>mespecializadas@esan.edu.pe</strong> a <strong>${escapeHtml(emailVal)}</strong>.
-            `;
+            Estamos validando tus datos. Te enviaremos la notificación a <strong>${escapeHtml(emailVal)}</strong> una vez revisada tu solicitud.
+          `;
              confirmModal.classList.add('open');
         } else {
           throw new Error((result && result.message) || 'Error en Google Apps Script');
